@@ -1,0 +1,2519 @@
+---------------------------------------------------
+Report for cell eval_top
+   Instance path: eval_top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	      12951        100.0
+                                 IOREG	         11        100.0
+                                 IOBUF	         75        100.0
+                                PFUREG	       8450        100.0
+                                   EBR	         28        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    kitcar_27000000s_0	          1         0.4
+                    kitcar_27000000s_1	          1         0.4
+                           lpddr4_core	          1        73.2
+memc_traffic_gen_LFCPNX_30s_128s_1s_0s	          1        26.0
+                                  osc0	          1         0.0
+---------------------------------------------------
+Report for cell osc0
+   Instance path: eval_top/osc_int_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0	          1         0.0
+---------------------------------------------------
+Report for cell lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0
+   Instance path: eval_top/osc_int_inst/lscc_osc_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell kitcar_27000000s_1
+   Instance path: eval_top/kitcar_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         50         0.4
+                                 IOREG	          1         9.1
+                                PFUREG	         26         0.3
+---------------------------------------------------
+Report for cell kitcar_27000000s_0
+   Instance path: eval_top/kitcar_inst2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         50         0.4
+                                 IOREG	          1         9.1
+                                PFUREG	         26         0.3
+---------------------------------------------------
+Report for cell memc_traffic_gen_LFCPNX_30s_128s_1s_0s
+   Instance path: eval_top/AHBL.u_tragen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       3370        26.0
+                                 IOREG	          9        81.8
+                                 IOBUF	          8        10.7
+                                PFUREG	       1923        22.8
+                                   EBR	         10        35.7
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+ ahbl0_32s_1s_1s_0_32768_1s_32768_8192	          1         0.4
+                         ahbl2apb0_32s	          1         1.5
+                  ahbl_tragen_30s_128s	          1        13.9
+apb0_13s_1s_0_1024_1024_1024_4096_4096_2048_1024_107_layer0	          1         0.1
+                                  cpu0	          1         7.1
+                                 gpio0	          1         0.8
+                         sysmem0_1.0.2	          1         0.4
+                                 uart0	          1         2.0
+---------------------------------------------------
+Report for cell ahbl0_32s_1s_1s_0_32768_1s_32768_8192
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         53         0.4
+                                PFUREG	          6         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+ahbl0_ipgen_lscc_ahbl_interconnect_Z96_layer0	          1         0.4
+---------------------------------------------------
+Report for cell ahbl0_ipgen_lscc_ahbl_interconnect_Z96_layer0
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         53         0.4
+                                PFUREG	          6         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+ ahbl0_ipgen_lscc_ahbl_bus_Z100_layer0	          1         0.4
+---------------------------------------------------
+Report for cell ahbl0_ipgen_lscc_ahbl_bus_Z100_layer0
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         53         0.4
+                                PFUREG	          6         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+ahbl0_ipgen_lscc_ahbl_decoder_Z97_layer0	          1         0.0
+ahbl0_ipgen_lscc_ahbl_default_slv_32s_2s_0s_1s_2s_0_1_2_3	          1         0.0
+ahbl0_ipgen_lscc_ahbl_multiplexor_32s_32s_2s_0s	          1         0.3
+---------------------------------------------------
+Report for cell ahbl0_ipgen_lscc_ahbl_decoder_Z97_layer0
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/u_lscc_ahbl_decoder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          5         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+ahbl0_ipgen_lscc_ahbl_decoder_prim_8s_32s_1s_1_98_layer0	          1         0.0
+ahbl0_ipgen_lscc_ahbl_decoder_prim_8s_32s_1s_1_99_layer0	          1         0.0
+---------------------------------------------------
+Report for cell ahbl0_ipgen_lscc_ahbl_decoder_prim_8s_32s_1s_1_98_layer0
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/u_lscc_ahbl_decoder/genblk1[0].u_lscc_ahbl_decoder_sel
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+ahbl0_ipgen_lscc_ahbl_decoder_comp_1s_0_32768_32s_32767_15s	          1         0.0
+---------------------------------------------------
+Report for cell ahbl0_ipgen_lscc_ahbl_decoder_comp_1s_0_32768_32s_32767_15s
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/u_lscc_ahbl_decoder/genblk1[0].u_lscc_ahbl_decoder_sel/genblk1[0].u_lscc_ahbl_decoder_comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+---------------------------------------------------
+Report for cell ahbl0_ipgen_lscc_ahbl_decoder_prim_8s_32s_1s_1_99_layer0
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/u_lscc_ahbl_decoder/genblk1[1].u_lscc_ahbl_decoder_sel
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+ahbl0_ipgen_lscc_ahbl_decoder_comp_1s_32768_8192_32s_40959_13s	          1         0.0
+---------------------------------------------------
+Report for cell ahbl0_ipgen_lscc_ahbl_decoder_comp_1s_32768_8192_32s_40959_13s
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/u_lscc_ahbl_decoder/genblk1[1].u_lscc_ahbl_decoder_sel/genblk1[0].u_lscc_ahbl_decoder_comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+---------------------------------------------------
+Report for cell ahbl0_ipgen_lscc_ahbl_multiplexor_32s_32s_2s_0s
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/u_lscc_ahbl_multiplexor
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         39         0.3
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell ahbl0_ipgen_lscc_ahbl_default_slv_32s_2s_0s_1s_2s_0_1_2_3
+   Instance path: eval_top/AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/u_lscc_ahbl_default_slv
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          2         0.0
+---------------------------------------------------
+Report for cell ahbl2apb0_32s
+   Instance path: eval_top/AHBL.u_tragen/ahbl2apb0_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        188         1.5
+                                PFUREG	        106         1.3
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+ahbl2apb0_ipgen_lscc_ahbl2apb_Z101_layer0	          1         1.5
+---------------------------------------------------
+Report for cell ahbl2apb0_ipgen_lscc_ahbl2apb_Z101_layer0
+   Instance path: eval_top/AHBL.u_tragen/ahbl2apb0_inst/lscc_ahbl2apb_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        188         1.5
+                                PFUREG	        106         1.3
+---------------------------------------------------
+Report for cell ahbl_tragen_30s_128s
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1794        13.9
+                                PFUREG	        963        11.4
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+lscc_ahbl_traffic_gen_30s_128s_10s_32s	          1        13.9
+---------------------------------------------------
+Report for cell lscc_ahbl_traffic_gen_30s_128s_10s_32s
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1794        13.9
+                                PFUREG	        963        11.4
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+           lscc_ahb_master_Z103_layer0	          1        13.1
+      lscc_traffic_gen_csr_Z102_layer0	          1         0.8
+---------------------------------------------------
+Report for cell lscc_traffic_gen_csr_Z102_layer0
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_traffic_gen_csr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         98         0.8
+                                PFUREG	        280         3.3
+---------------------------------------------------
+Report for cell lscc_ahb_master_Z103_layer0
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1696        13.1
+                                PFUREG	        683         8.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                 lscc_lfsr_16s_2880_1s	          1         0.7
+               lscc_lfsr_16s_2880_1s_0	          1         0.6
+               lscc_lfsr_16s_2880_1s_1	          1         0.4
+               lscc_lfsr_16s_2880_1s_2	          1         0.6
+               lscc_lfsr_16s_2880_1s_3	          1         0.6
+               lscc_lfsr_16s_2880_1s_4	          1         0.6
+               lscc_lfsr_16s_2880_1s_5	          1         0.9
+               lscc_lfsr_16s_2880_1s_6	          1         0.5
+               lscc_lfsr_30s_737344_0s	          1         0.2
+                     lscc_lfsr_3s_5_1s	          1         0.1
+                    lscc_lfsr_6s_21_1s	          1         0.1
+---------------------------------------------------
+Report for cell lscc_lfsr_30s_737344_0s
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/u_addr_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         32         0.2
+                                PFUREG	         30         0.4
+---------------------------------------------------
+Report for cell lscc_lfsr_16s_2880_1s
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/DATA_GEN[1].u_data_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         97         0.7
+                                PFUREG	         16         0.2
+---------------------------------------------------
+Report for cell lscc_lfsr_16s_2880_1s_0
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/DATA_GEN[2].u_data_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         81         0.6
+                                PFUREG	         16         0.2
+---------------------------------------------------
+Report for cell lscc_lfsr_16s_2880_1s_1
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/DATA_GEN[0].u_data_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         58         0.4
+                                PFUREG	         16         0.2
+---------------------------------------------------
+Report for cell lscc_lfsr_16s_2880_1s_2
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/DATA_GEN[3].u_data_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         81         0.6
+                                PFUREG	         16         0.2
+---------------------------------------------------
+Report for cell lscc_lfsr_16s_2880_1s_3
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/DATA_GEN[4].u_data_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         80         0.6
+                                PFUREG	         16         0.2
+---------------------------------------------------
+Report for cell lscc_lfsr_16s_2880_1s_4
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/DATA_GEN[5].u_data_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         81         0.6
+                                PFUREG	         16         0.2
+---------------------------------------------------
+Report for cell lscc_lfsr_16s_2880_1s_5
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/DATA_GEN[6].u_data_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        121         0.9
+                                PFUREG	         16         0.2
+---------------------------------------------------
+Report for cell lscc_lfsr_16s_2880_1s_6
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/DATA_GEN[7].u_data_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         65         0.5
+                                PFUREG	         16         0.2
+---------------------------------------------------
+Report for cell lscc_lfsr_3s_5_1s
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/u_hburst_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell lscc_lfsr_6s_21_1s
+   Instance path: eval_top/AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_ahb_master/u_delay_lscc_lfsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         14         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell apb0_13s_1s_0_1024_1024_1024_4096_4096_2048_1024_107_layer0
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          5         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+apb0_ipgen_lscc_apb_interconnect_Z104_layer0	          1         0.1
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_interconnect_Z104_layer0
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          5         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+   apb0_ipgen_lscc_apb_bus_Z106_layer0	          1         0.1
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_bus_Z106_layer0
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          5         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+apb0_ipgen_lscc_apb_decoder_Z105_layer0	          1         0.1
+apb0_ipgen_lscc_apb_multiplexor_32s_13s_32s_4s_0s	          1         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_decoder_Z105_layer0
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_decoder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+apb0_ipgen_lscc_apb_decoder_prim_32s_1s_13s_1s_1_0_1024	          1         0.0
+apb0_ipgen_lscc_apb_decoder_prim_32s_1s_13s_1s_1_1024_1024	          1         0.0
+apb0_ipgen_lscc_apb_decoder_prim_32s_1s_13s_1s_1_2048_1024	          1         0.0
+apb0_ipgen_lscc_apb_decoder_prim_32s_1s_13s_1s_1_4096_4096	          1         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_decoder_prim_32s_1s_13s_1s_1_0_1024
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_decoder/genblk1[0].u_lscc_apb_decoder_sel
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+apb0_ipgen_lscc_apb_decoder_comp_32s_0_1024_13s_1s_1023_10s	          1         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_decoder_comp_32s_0_1024_13s_1s_1023_10s
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_decoder/genblk1[0].u_lscc_apb_decoder_sel/genblk1[0].u_lscc_apb_decoder_comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_decoder_prim_32s_1s_13s_1s_1_1024_1024
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_decoder/genblk1[1].u_lscc_apb_decoder_sel
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+apb0_ipgen_lscc_apb_decoder_comp_32s_1024_1024_13s_1s_2047_10s	          1         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_decoder_comp_32s_1024_1024_13s_1s_2047_10s
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_decoder/genblk1[1].u_lscc_apb_decoder_sel/genblk1[0].u_lscc_apb_decoder_comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_decoder_prim_32s_1s_13s_1s_1_4096_4096
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_decoder/genblk1[2].u_lscc_apb_decoder_sel
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+apb0_ipgen_lscc_apb_decoder_comp_32s_4096_4096_13s_1s_8191_12s	          1         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_decoder_comp_32s_4096_4096_13s_1s_8191_12s
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_decoder/genblk1[2].u_lscc_apb_decoder_sel/genblk1[0].u_lscc_apb_decoder_comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_decoder_prim_32s_1s_13s_1s_1_2048_1024
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_decoder/genblk1[3].u_lscc_apb_decoder_sel
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+apb0_ipgen_lscc_apb_decoder_comp_32s_2048_1024_13s_1s_3071_10s	          1         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_decoder_comp_32s_2048_1024_13s_1s_3071_10s
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_decoder/genblk1[3].u_lscc_apb_decoder_sel/genblk1[0].u_lscc_apb_decoder_comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+---------------------------------------------------
+Report for cell apb0_ipgen_lscc_apb_multiplexor_32s_13s_32s_4s_0s
+   Instance path: eval_top/AHBL.u_tragen/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bus/u_lscc_apb_multiplexor
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell cpu0
+   Instance path: eval_top/AHBL.u_tragen/cpu0_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        918         7.1
+                                PFUREG	        584         6.9
+                                   EBR	          2         7.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                              VexRiscv	          1         6.9
+---------------------------------------------------
+Report for cell VexRiscv
+   Instance path: eval_top/AHBL.u_tragen/cpu0_inst/i_cpu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        895         6.9
+                                PFUREG	        564         6.7
+                                   EBR	          2         7.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                  StreamFifoLowLatency	          1         6.3
+---------------------------------------------------
+Report for cell StreamFifoLowLatency
+   Instance path: eval_top/AHBL.u_tragen/cpu0_inst/i_cpu/IBusSimplePlugin_rspJoin_rspBuffer_c
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        819         6.3
+                                PFUREG	         31         0.4
+---------------------------------------------------
+Report for cell gpio0
+   Instance path: eval_top/AHBL.u_tragen/gpio0_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        101         0.8
+                                 IOREG	          8        72.7
+                                 IOBUF	          8        10.7
+                                PFUREG	         89         1.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+gpio0_ipgen_lscc_gpio_LIFCL_4s_32'h000000FF_8s_0_0_0_32'h00000000_APB_6s_108_layer0	          1         0.8
+---------------------------------------------------
+Report for cell gpio0_ipgen_lscc_gpio_LIFCL_4s_32'h000000FF_8s_0_0_0_32'h00000000_APB_6s_108_layer0
+   Instance path: eval_top/AHBL.u_tragen/gpio0_inst/lscc_gpio_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        101         0.8
+                                 IOREG	          8        72.7
+                                 IOBUF	          8        10.7
+                                PFUREG	         89         1.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+gpio0_ipgen_lscc_apb2lmmi_8s_6s_1s_1_2_4_8_4s	          1         0.1
+gpio0_ipgen_lscc_gpio_lmmi_Z109_layer0	          1         0.7
+---------------------------------------------------
+Report for cell gpio0_ipgen_lscc_gpio_lmmi_Z109_layer0
+   Instance path: eval_top/AHBL.u_tragen/gpio0_inst/lscc_gpio_inst/LxxNX.lscc_gpio_lmmi_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         93         0.7
+                                 IOREG	          8        72.7
+                                 IOBUF	          8        10.7
+                                PFUREG	         64         0.8
+---------------------------------------------------
+Report for cell gpio0_ipgen_lscc_apb2lmmi_8s_6s_1s_1_2_4_8_4s
+   Instance path: eval_top/AHBL.u_tragen/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	         25         0.3
+---------------------------------------------------
+Report for cell sysmem0_1.0.2
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         51         0.4
+                                PFUREG	         24         0.3
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+sysmem0_ipgen_lscc_sys_mem_Z124_layer0	          1         0.4
+---------------------------------------------------
+Report for cell sysmem0_ipgen_lscc_sys_mem_Z124_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         51         0.4
+                                PFUREG	         24         0.3
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+sysmem0_ipgen_lscc_ahblmem_slave_Z125_layer0_0	          1         0.3
+sysmem0_ipgen_lscc_ahblmem_slave_Z125_layer0_1	          1         0.0
+    sysmem0_ipgen_lscc_mem_Z112_layer0	          1         0.0
+---------------------------------------------------
+Report for cell sysmem0_ipgen_lscc_ahblmem_slave_Z125_layer0_1
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/bridge_s0.bridge_s0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+                                PFUREG	          1         0.0
+---------------------------------------------------
+Report for cell sysmem0_ipgen_lscc_ahblmem_slave_Z125_layer0_0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/bridge_s1.bridge_s1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         45         0.3
+                                PFUREG	         23         0.3
+---------------------------------------------------
+Report for cell sysmem0_ipgen_lscc_mem_Z112_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+          lscc_ram_dp_true_Z123_layer0	          1         0.0
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_Z123_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+     lscc_ram_dp_true_main_Z122_layer0	          1         0.0
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_main_Z122_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+     lscc_ram_dp_true_inst_Z113_layer0	          1         0.0
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_inst_Z113_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main/uinst_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+     lscc_ram_dp_true_core_Z114_layer0	          1         0.0
+     lscc_ram_dp_true_core_Z115_layer0	          1         0.0
+     lscc_ram_dp_true_core_Z116_layer0	          1         0.0
+     lscc_ram_dp_true_core_Z117_layer0	          1         0.0
+     lscc_ram_dp_true_core_Z118_layer0	          1         0.0
+     lscc_ram_dp_true_core_Z119_layer0	          1         0.0
+     lscc_ram_dp_true_core_Z120_layer0	          1         0.0
+     lscc_ram_dp_true_core_Z121_layer0	          1         0.0
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_core_Z121_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main/uinst_0/prim.NON_MIX.xADDR[0].xDATA[7].mem_file.u_dp16k
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_core_Z118_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main/uinst_0/prim.NON_MIX.xADDR[0].xDATA[4].mem_file.u_dp16k
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_core_Z119_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main/uinst_0/prim.NON_MIX.xADDR[0].xDATA[5].mem_file.u_dp16k
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_core_Z120_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main/uinst_0/prim.NON_MIX.xADDR[0].xDATA[6].mem_file.u_dp16k
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_core_Z117_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main/uinst_0/prim.NON_MIX.xADDR[0].xDATA[3].mem_file.u_dp16k
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_core_Z114_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main/uinst_0/prim.NON_MIX.xADDR[0].xDATA[0].mem_file.u_dp16k
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_core_Z115_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main/uinst_0/prim.NON_MIX.xADDR[0].xDATA[1].mem_file.u_dp16k
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell lscc_ram_dp_true_core_Z116_layer0
+   Instance path: eval_top/AHBL.u_tragen/IMPL.sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/lifcl.ebr.dp.u_mem/mem_main/uinst_0/prim.NON_MIX.xADDR[0].xDATA[2].mem_file.u_dp16k
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell uart0
+   Instance path: eval_top/AHBL.u_tragen/uart0_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        255         2.0
+                                 IOREG	          1         9.1
+                                PFUREG	        146         1.7
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+     uart0_ipgen_lscc_uart_Z111_layer0	          1         2.0
+---------------------------------------------------
+Report for cell uart0_ipgen_lscc_uart_Z111_layer0
+   Instance path: eval_top/AHBL.u_tragen/uart0_inst/lscc_uart_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        255         2.0
+                                 IOREG	          1         9.1
+                                PFUREG	        146         1.7
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+uart0_ipgen_lscc_uart_intface_Z110_layer0	          1         0.4
+uart0_ipgen_lscc_uart_rxcver_8s_0s_5s_1_2_4_8_16_MachXO3D	          1         0.8
+uart0_ipgen_lscc_uart_txmitt_8s_0s_7s_1_2_4_8_16_32_64	          1         0.7
+---------------------------------------------------
+Report for cell uart0_ipgen_lscc_uart_intface_Z110_layer0
+   Instance path: eval_top/AHBL.u_tragen/uart0_inst/lscc_uart_inst/u_intface
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         57         0.4
+                                PFUREG	         48         0.6
+---------------------------------------------------
+Report for cell uart0_ipgen_lscc_uart_rxcver_8s_0s_5s_1_2_4_8_16_MachXO3D
+   Instance path: eval_top/AHBL.u_tragen/uart0_inst/lscc_uart_inst/u_rxcver
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        106         0.8
+                                 IOREG	          1         9.1
+                                PFUREG	         56         0.7
+---------------------------------------------------
+Report for cell uart0_ipgen_lscc_uart_txmitt_8s_0s_7s_1_2_4_8_16_32_64
+   Instance path: eval_top/AHBL.u_tragen/uart0_inst/lscc_uart_inst/u_txmitt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         92         0.7
+                                PFUREG	         42         0.5
+---------------------------------------------------
+Report for cell lpddr4_core
+   Instance path: eval_top/u_lpddr4_core
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       9480        73.2
+                                 IOBUF	         50        66.7
+                                PFUREG	       6469        76.6
+                                   EBR	         18        64.3
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                      secured_design_1	          1        73.2
+---------------------------------------------------
+Report for cell secured_design_1
+   Instance path: eval_top/u_lpddr4_core/lscc_lpddr4_mc_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       9480        73.2
+                                 IOBUF	         50        66.7
+                                PFUREG	       6469        76.6
+                                   EBR	         18        64.3
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_191	          1         8.5
+                      secured_design_2	          1         0.4
+                    secured_design_209	          1         9.3
+                    secured_design_214	          1        10.5
+                    secured_design_221	          1         2.5
+                      secured_design_7	          1        22.0
+                     secured_design_71	          1        20.0
+---------------------------------------------------
+Report for cell secured_design_2
+   Instance path: eval_top/secured_instance_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         58         0.4
+                                PFUREG	        575         6.8
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                      secured_design_3	          1         0.4
+---------------------------------------------------
+Report for cell secured_design_3
+   Instance path: eval_top/secured_instance_3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         48         0.4
+                                PFUREG	         51         0.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                      secured_design_4	          1         0.4
+---------------------------------------------------
+Report for cell secured_design_4
+   Instance path: eval_top/secured_instance_4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         48         0.4
+                                PFUREG	         51         0.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                      secured_design_5	          1         0.4
+---------------------------------------------------
+Report for cell secured_design_5
+   Instance path: eval_top/secured_instance_5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         48         0.4
+                                PFUREG	         51         0.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                      secured_design_6	          1         0.4
+---------------------------------------------------
+Report for cell secured_design_6
+   Instance path: eval_top/secured_instance_6
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         48         0.4
+                                PFUREG	         51         0.6
+---------------------------------------------------
+Report for cell secured_design_7
+   Instance path: eval_top/secured_instance_7
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       2844        22.0
+                                PFUREG	       1870        22.1
+                                   EBR	         10        35.7
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_57	          1         2.8
+                     secured_design_59	          1         8.9
+                      secured_design_8	          1        10.2
+---------------------------------------------------
+Report for cell secured_design_8
+   Instance path: eval_top/secured_instance_8
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1327        10.2
+                                PFUREG	        936        11.1
+                                   EBR	         10        35.7
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_11	          1         1.0
+                     secured_design_15	          1         0.1
+                     secured_design_16	          1         0.6
+                     secured_design_17	          1         0.3
+                     secured_design_26	          1         6.8
+                     secured_design_29	          1         0.4
+                     secured_design_41	          1         0.4
+                      secured_design_9	          1         0.6
+---------------------------------------------------
+Report for cell secured_design_9
+   Instance path: eval_top/secured_instance_9
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         83         0.6
+                                PFUREG	        101         1.2
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_10	          1         0.6
+---------------------------------------------------
+Report for cell secured_design_10
+   Instance path: eval_top/secured_instance_10
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         83         0.6
+                                PFUREG	        101         1.2
+---------------------------------------------------
+Report for cell secured_design_11
+   Instance path: eval_top/secured_instance_11
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        127         1.0
+                                PFUREG	          7         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_12	          1         1.0
+---------------------------------------------------
+Report for cell secured_design_12
+   Instance path: eval_top/secured_instance_12
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        127         1.0
+                                PFUREG	          7         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_13	          1         1.0
+---------------------------------------------------
+Report for cell secured_design_13
+   Instance path: eval_top/secured_instance_13
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        127         1.0
+                                PFUREG	          7         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_14	          1         0.4
+---------------------------------------------------
+Report for cell secured_design_14
+   Instance path: eval_top/secured_instance_14
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         53         0.4
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_15
+   Instance path: eval_top/secured_instance_15
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         14         0.1
+                                PFUREG	          9         0.1
+---------------------------------------------------
+Report for cell secured_design_16
+   Instance path: eval_top/secured_instance_16
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         74         0.6
+                                PFUREG	        227         2.7
+---------------------------------------------------
+Report for cell secured_design_17
+   Instance path: eval_top/secured_instance_17
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         34         0.3
+                                PFUREG	          2         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_18	          1         0.3
+---------------------------------------------------
+Report for cell secured_design_18
+   Instance path: eval_top/secured_instance_18
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         34         0.3
+                                PFUREG	          2         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_19	          1         0.3
+---------------------------------------------------
+Report for cell secured_design_19
+   Instance path: eval_top/secured_instance_19
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         34         0.3
+                                PFUREG	          2         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_20	          1         0.0
+                     secured_design_25	          1         0.2
+---------------------------------------------------
+Report for cell secured_design_20
+   Instance path: eval_top/secured_instance_20
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_21	          1         0.0
+                     secured_design_23	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_21
+   Instance path: eval_top/secured_instance_21
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_22	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_22
+   Instance path: eval_top/secured_instance_22
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_23
+   Instance path: eval_top/secured_instance_23
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_24	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_24
+   Instance path: eval_top/secured_instance_24
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_25
+   Instance path: eval_top/secured_instance_25
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         32         0.2
+                                PFUREG	          2         0.0
+---------------------------------------------------
+Report for cell secured_design_26
+   Instance path: eval_top/secured_instance_26
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        885         6.8
+                                PFUREG	        559         6.6
+                                   EBR	          2         7.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_27	          1         6.8
+---------------------------------------------------
+Report for cell secured_design_27
+   Instance path: eval_top/secured_instance_27
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        885         6.8
+                                PFUREG	        559         6.6
+                                   EBR	          2         7.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_28	          1         0.3
+---------------------------------------------------
+Report for cell secured_design_28
+   Instance path: eval_top/secured_instance_28
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         33         0.3
+                                PFUREG	         31         0.4
+---------------------------------------------------
+Report for cell secured_design_29
+   Instance path: eval_top/secured_instance_29
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         52         0.4
+                                PFUREG	          7         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_30	          1         0.4
+---------------------------------------------------
+Report for cell secured_design_30
+   Instance path: eval_top/secured_instance_30
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         52         0.4
+                                PFUREG	          7         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_31	          1         0.4
+---------------------------------------------------
+Report for cell secured_design_31
+   Instance path: eval_top/secured_instance_31
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         52         0.4
+                                PFUREG	          7         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_32	          1         0.1
+                     secured_design_39	          1         0.3
+                     secured_design_40	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_32
+   Instance path: eval_top/secured_instance_32
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_33	          1         0.0
+                     secured_design_35	          1         0.1
+                     secured_design_37	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_33
+   Instance path: eval_top/secured_instance_33
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_34	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_34
+   Instance path: eval_top/secured_instance_34
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_35
+   Instance path: eval_top/secured_instance_35
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_36	          1         0.1
+---------------------------------------------------
+Report for cell secured_design_36
+   Instance path: eval_top/secured_instance_36
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_37
+   Instance path: eval_top/secured_instance_37
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_38	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_38
+   Instance path: eval_top/secured_instance_38
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_39
+   Instance path: eval_top/secured_instance_39
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         38         0.3
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_40
+   Instance path: eval_top/secured_instance_40
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          2         0.0
+---------------------------------------------------
+Report for cell secured_design_41
+   Instance path: eval_top/secured_instance_41
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         58         0.4
+                                PFUREG	         24         0.3
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_42	          1         0.4
+---------------------------------------------------
+Report for cell secured_design_42
+   Instance path: eval_top/secured_instance_42
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         58         0.4
+                                PFUREG	         24         0.3
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_43	          1         0.0
+                     secured_design_44	          1         0.4
+                     secured_design_45	          1         0.1
+---------------------------------------------------
+Report for cell secured_design_43
+   Instance path: eval_top/secured_instance_43
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+                                PFUREG	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_44
+   Instance path: eval_top/secured_instance_44
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         49         0.4
+                                PFUREG	         23         0.3
+---------------------------------------------------
+Report for cell secured_design_45
+   Instance path: eval_top/secured_instance_45
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_46	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_46
+   Instance path: eval_top/secured_instance_46
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_47	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_47
+   Instance path: eval_top/secured_instance_47
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_48	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_48
+   Instance path: eval_top/secured_instance_48
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_49	          1         0.0
+                     secured_design_50	          1         0.0
+                     secured_design_51	          1         0.0
+                     secured_design_52	          1         0.0
+                     secured_design_53	          1         0.0
+                     secured_design_54	          1         0.0
+                     secured_design_55	          1         0.0
+                     secured_design_56	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_49
+   Instance path: eval_top/secured_instance_49
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_50
+   Instance path: eval_top/secured_instance_50
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_51
+   Instance path: eval_top/secured_instance_51
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_52
+   Instance path: eval_top/secured_instance_52
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_53
+   Instance path: eval_top/secured_instance_53
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_54
+   Instance path: eval_top/secured_instance_54
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_55
+   Instance path: eval_top/secured_instance_55
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_56
+   Instance path: eval_top/secured_instance_56
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_57
+   Instance path: eval_top/secured_instance_57
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        360         2.8
+                                PFUREG	        445         5.3
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_58	          1         2.7
+---------------------------------------------------
+Report for cell secured_design_58
+   Instance path: eval_top/secured_instance_58
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        347         2.7
+                                PFUREG	         53         0.6
+---------------------------------------------------
+Report for cell secured_design_59
+   Instance path: eval_top/secured_instance_59
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1157         8.9
+                                PFUREG	        471         5.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_60	          1         0.7
+                     secured_design_61	          1         0.2
+                     secured_design_62	          1         5.3
+---------------------------------------------------
+Report for cell secured_design_60
+   Instance path: eval_top/secured_instance_60
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         91         0.7
+                                PFUREG	         58         0.7
+---------------------------------------------------
+Report for cell secured_design_61
+   Instance path: eval_top/secured_instance_61
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         29         0.2
+                                PFUREG	         56         0.7
+---------------------------------------------------
+Report for cell secured_design_62
+   Instance path: eval_top/secured_instance_62
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        692         5.3
+                                PFUREG	        286         3.4
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_63	          1         0.1
+                     secured_design_64	          1         0.1
+                     secured_design_65	          1         0.1
+                     secured_design_66	          1         0.1
+                     secured_design_67	          1         0.1
+                     secured_design_68	          1         0.1
+                     secured_design_69	          1         0.1
+                     secured_design_70	          1         0.1
+---------------------------------------------------
+Report for cell secured_design_63
+   Instance path: eval_top/secured_instance_63
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         19         0.1
+---------------------------------------------------
+Report for cell secured_design_64
+   Instance path: eval_top/secured_instance_64
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.1
+---------------------------------------------------
+Report for cell secured_design_65
+   Instance path: eval_top/secured_instance_65
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.1
+---------------------------------------------------
+Report for cell secured_design_66
+   Instance path: eval_top/secured_instance_66
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.1
+---------------------------------------------------
+Report for cell secured_design_67
+   Instance path: eval_top/secured_instance_67
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.1
+---------------------------------------------------
+Report for cell secured_design_68
+   Instance path: eval_top/secured_instance_68
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.1
+---------------------------------------------------
+Report for cell secured_design_69
+   Instance path: eval_top/secured_instance_69
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.1
+---------------------------------------------------
+Report for cell secured_design_70
+   Instance path: eval_top/secured_instance_70
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.1
+---------------------------------------------------
+Report for cell secured_design_71
+   Instance path: eval_top/secured_instance_71
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       2590        20.0
+                                PFUREG	       1084        12.8
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_188	          1         1.2
+                    secured_design_189	          1         0.1
+                    secured_design_190	          1         0.1
+                     secured_design_72	          1         1.4
+                     secured_design_73	          1         1.2
+                     secured_design_74	          1         1.3
+                     secured_design_75	          1         1.3
+                     secured_design_76	          1         1.4
+                     secured_design_77	          1         2.4
+                     secured_design_83	          1         0.0
+                     secured_design_84	          1         0.7
+                     secured_design_86	          1         8.9
+---------------------------------------------------
+Report for cell secured_design_72
+   Instance path: eval_top/secured_instance_72
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        178         1.4
+                                PFUREG	         28         0.3
+---------------------------------------------------
+Report for cell secured_design_73
+   Instance path: eval_top/secured_instance_73
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        159         1.2
+                                PFUREG	         21         0.2
+---------------------------------------------------
+Report for cell secured_design_74
+   Instance path: eval_top/secured_instance_74
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        167         1.3
+                                PFUREG	         28         0.3
+---------------------------------------------------
+Report for cell secured_design_75
+   Instance path: eval_top/secured_instance_75
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        168         1.3
+                                PFUREG	         28         0.3
+---------------------------------------------------
+Report for cell secured_design_76
+   Instance path: eval_top/secured_instance_76
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        177         1.4
+                                PFUREG	         28         0.3
+---------------------------------------------------
+Report for cell secured_design_77
+   Instance path: eval_top/secured_instance_77
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        306         2.4
+                                PFUREG	        212         2.5
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_78	          1         0.3
+                     secured_design_79	          1         0.6
+                     secured_design_80	          1         0.1
+                     secured_design_81	          1         0.8
+                     secured_design_82	          1         0.2
+---------------------------------------------------
+Report for cell secured_design_78
+   Instance path: eval_top/secured_instance_78
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         33         0.3
+                                PFUREG	         27         0.3
+---------------------------------------------------
+Report for cell secured_design_79
+   Instance path: eval_top/secured_instance_79
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         78         0.6
+                                PFUREG	         51         0.6
+---------------------------------------------------
+Report for cell secured_design_80
+   Instance path: eval_top/secured_instance_80
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.1
+                                PFUREG	         11         0.1
+---------------------------------------------------
+Report for cell secured_design_81
+   Instance path: eval_top/secured_instance_81
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        108         0.8
+                                PFUREG	         73         0.9
+---------------------------------------------------
+Report for cell secured_design_82
+   Instance path: eval_top/secured_instance_82
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         30         0.2
+                                PFUREG	         10         0.1
+---------------------------------------------------
+Report for cell secured_design_83
+   Instance path: eval_top/secured_instance_83
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.0
+                                PFUREG	          2         0.0
+---------------------------------------------------
+Report for cell secured_design_84
+   Instance path: eval_top/secured_instance_84
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         92         0.7
+                                PFUREG	         12         0.1
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_85	          1         0.2
+---------------------------------------------------
+Report for cell secured_design_85
+   Instance path: eval_top/secured_instance_85
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         32         0.2
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_86
+   Instance path: eval_top/secured_instance_86
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1152         8.9
+                                PFUREG	        655         7.8
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_87	          1         0.9
+                     secured_design_99	          1         5.8
+---------------------------------------------------
+Report for cell secured_design_87
+   Instance path: eval_top/secured_instance_87
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        119         0.9
+                                PFUREG	         65         0.8
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     secured_design_88	          1         0.1
+                     secured_design_89	          1         0.0
+                     secured_design_90	          1         0.1
+                     secured_design_91	          1         0.1
+                     secured_design_92	          1         0.1
+                     secured_design_93	          1         0.1
+                     secured_design_94	          1         0.1
+                     secured_design_95	          1         0.1
+                     secured_design_96	          1         0.1
+                     secured_design_97	          1         0.1
+                     secured_design_98	          1         0.1
+---------------------------------------------------
+Report for cell secured_design_88
+   Instance path: eval_top/secured_instance_88
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         13         0.1
+                                PFUREG	          8         0.1
+---------------------------------------------------
+Report for cell secured_design_89
+   Instance path: eval_top/secured_instance_89
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_90
+   Instance path: eval_top/secured_instance_90
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_91
+   Instance path: eval_top/secured_instance_91
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_92
+   Instance path: eval_top/secured_instance_92
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_93
+   Instance path: eval_top/secured_instance_93
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         13         0.1
+                                PFUREG	          8         0.1
+---------------------------------------------------
+Report for cell secured_design_94
+   Instance path: eval_top/secured_instance_94
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_95
+   Instance path: eval_top/secured_instance_95
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         13         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_96
+   Instance path: eval_top/secured_instance_96
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         13         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_97
+   Instance path: eval_top/secured_instance_97
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         13         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_98
+   Instance path: eval_top/secured_instance_98
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         13         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_99
+   Instance path: eval_top/secured_instance_99
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        750         5.8
+                                PFUREG	        440         5.2
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_100	          1         0.0
+                    secured_design_101	          1         0.0
+                    secured_design_102	          1         0.0
+                    secured_design_103	          1         0.0
+                    secured_design_104	          1         0.0
+                    secured_design_105	          1         0.0
+                    secured_design_106	          1         0.0
+                    secured_design_107	          1         0.0
+                    secured_design_108	          1         0.1
+                    secured_design_109	          1         0.1
+                    secured_design_110	          1         0.1
+                    secured_design_111	          1         0.1
+                    secured_design_112	          1         0.1
+                    secured_design_113	          1         0.1
+                    secured_design_114	          1         0.1
+                    secured_design_115	          1         0.1
+                    secured_design_116	          1         0.1
+                    secured_design_117	          1         0.1
+                    secured_design_118	          1         0.1
+                    secured_design_119	          1         0.1
+                    secured_design_120	          1         0.1
+                    secured_design_121	          1         0.1
+                    secured_design_122	          1         0.1
+                    secured_design_123	          1         0.1
+                    secured_design_124	          1         0.1
+                    secured_design_125	          1         0.1
+                    secured_design_126	          1         0.1
+                    secured_design_127	          1         0.1
+                    secured_design_128	          1         0.1
+                    secured_design_129	          1         0.1
+                    secured_design_130	          1         0.1
+                    secured_design_131	          1         0.1
+                    secured_design_132	          1         0.1
+                    secured_design_133	          1         0.1
+                    secured_design_134	          1         0.1
+                    secured_design_135	          1         0.1
+                    secured_design_136	          1         0.1
+                    secured_design_137	          1         0.1
+                    secured_design_138	          1         0.1
+                    secured_design_139	          1         0.1
+                    secured_design_140	          1         0.1
+                    secured_design_141	          1         0.1
+                    secured_design_142	          1         0.1
+                    secured_design_143	          1         0.1
+                    secured_design_144	          1         0.1
+                    secured_design_145	          1         0.1
+                    secured_design_146	          1         0.1
+                    secured_design_147	          1         0.1
+                    secured_design_148	          1         0.1
+                    secured_design_149	          1         0.1
+                    secured_design_150	          1         0.1
+                    secured_design_151	          1         0.1
+                    secured_design_152	          1         0.1
+                    secured_design_153	          1         0.1
+                    secured_design_154	          1         0.1
+                    secured_design_155	          1         0.1
+                    secured_design_156	          1         0.1
+                    secured_design_157	          1         0.1
+                    secured_design_158	          1         0.1
+                    secured_design_159	          1         0.1
+                    secured_design_160	          1         0.1
+                    secured_design_161	          1         0.1
+                    secured_design_162	          1         0.1
+                    secured_design_163	          1         0.1
+                    secured_design_164	          1         0.1
+                    secured_design_165	          1         0.1
+                    secured_design_166	          1         0.1
+                    secured_design_167	          1         0.1
+                    secured_design_168	          1         0.1
+                    secured_design_169	          1         0.1
+                    secured_design_170	          1         0.1
+                    secured_design_171	          1         0.1
+                    secured_design_172	          1         0.0
+                    secured_design_173	          1         0.0
+                    secured_design_174	          1         0.0
+                    secured_design_175	          1         0.0
+                    secured_design_176	          1         0.0
+                    secured_design_177	          1         0.0
+                    secured_design_178	          1         0.0
+                    secured_design_179	          1         0.0
+                    secured_design_180	          1         0.1
+                    secured_design_181	          1         0.1
+                    secured_design_182	          1         0.1
+                    secured_design_183	          1         0.1
+                    secured_design_184	          1         0.1
+                    secured_design_185	          1         0.1
+                    secured_design_186	          1         0.1
+                    secured_design_187	          1         0.1
+---------------------------------------------------
+Report for cell secured_design_100
+   Instance path: eval_top/secured_instance_100
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_101
+   Instance path: eval_top/secured_instance_101
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_102
+   Instance path: eval_top/secured_instance_102
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_103
+   Instance path: eval_top/secured_instance_103
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_104
+   Instance path: eval_top/secured_instance_104
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_105
+   Instance path: eval_top/secured_instance_105
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_106
+   Instance path: eval_top/secured_instance_106
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_107
+   Instance path: eval_top/secured_instance_107
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_108
+   Instance path: eval_top/secured_instance_108
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_109
+   Instance path: eval_top/secured_instance_109
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_110
+   Instance path: eval_top/secured_instance_110
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_111
+   Instance path: eval_top/secured_instance_111
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_112
+   Instance path: eval_top/secured_instance_112
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_113
+   Instance path: eval_top/secured_instance_113
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_114
+   Instance path: eval_top/secured_instance_114
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_115
+   Instance path: eval_top/secured_instance_115
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_116
+   Instance path: eval_top/secured_instance_116
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_117
+   Instance path: eval_top/secured_instance_117
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_118
+   Instance path: eval_top/secured_instance_118
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_119
+   Instance path: eval_top/secured_instance_119
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_120
+   Instance path: eval_top/secured_instance_120
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_121
+   Instance path: eval_top/secured_instance_121
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_122
+   Instance path: eval_top/secured_instance_122
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_123
+   Instance path: eval_top/secured_instance_123
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_124
+   Instance path: eval_top/secured_instance_124
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_125
+   Instance path: eval_top/secured_instance_125
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_126
+   Instance path: eval_top/secured_instance_126
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_127
+   Instance path: eval_top/secured_instance_127
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_128
+   Instance path: eval_top/secured_instance_128
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_129
+   Instance path: eval_top/secured_instance_129
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_130
+   Instance path: eval_top/secured_instance_130
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_131
+   Instance path: eval_top/secured_instance_131
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_132
+   Instance path: eval_top/secured_instance_132
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_133
+   Instance path: eval_top/secured_instance_133
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_134
+   Instance path: eval_top/secured_instance_134
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_135
+   Instance path: eval_top/secured_instance_135
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_136
+   Instance path: eval_top/secured_instance_136
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_137
+   Instance path: eval_top/secured_instance_137
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_138
+   Instance path: eval_top/secured_instance_138
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_139
+   Instance path: eval_top/secured_instance_139
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         0.1
+                                PFUREG	          5         0.1
+---------------------------------------------------
+Report for cell secured_design_140
+   Instance path: eval_top/secured_instance_140
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_141
+   Instance path: eval_top/secured_instance_141
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_142
+   Instance path: eval_top/secured_instance_142
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_143
+   Instance path: eval_top/secured_instance_143
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_144
+   Instance path: eval_top/secured_instance_144
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_145
+   Instance path: eval_top/secured_instance_145
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_146
+   Instance path: eval_top/secured_instance_146
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_147
+   Instance path: eval_top/secured_instance_147
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_148
+   Instance path: eval_top/secured_instance_148
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_149
+   Instance path: eval_top/secured_instance_149
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_150
+   Instance path: eval_top/secured_instance_150
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_151
+   Instance path: eval_top/secured_instance_151
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_152
+   Instance path: eval_top/secured_instance_152
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_153
+   Instance path: eval_top/secured_instance_153
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_154
+   Instance path: eval_top/secured_instance_154
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_155
+   Instance path: eval_top/secured_instance_155
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_156
+   Instance path: eval_top/secured_instance_156
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_157
+   Instance path: eval_top/secured_instance_157
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_158
+   Instance path: eval_top/secured_instance_158
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_159
+   Instance path: eval_top/secured_instance_159
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_160
+   Instance path: eval_top/secured_instance_160
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_161
+   Instance path: eval_top/secured_instance_161
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_162
+   Instance path: eval_top/secured_instance_162
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_163
+   Instance path: eval_top/secured_instance_163
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.1
+                                PFUREG	          6         0.1
+---------------------------------------------------
+Report for cell secured_design_164
+   Instance path: eval_top/secured_instance_164
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_165
+   Instance path: eval_top/secured_instance_165
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_166
+   Instance path: eval_top/secured_instance_166
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_167
+   Instance path: eval_top/secured_instance_167
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_168
+   Instance path: eval_top/secured_instance_168
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_169
+   Instance path: eval_top/secured_instance_169
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_170
+   Instance path: eval_top/secured_instance_170
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_171
+   Instance path: eval_top/secured_instance_171
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         0.1
+                                PFUREG	          4         0.0
+---------------------------------------------------
+Report for cell secured_design_172
+   Instance path: eval_top/secured_instance_172
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_173
+   Instance path: eval_top/secured_instance_173
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_174
+   Instance path: eval_top/secured_instance_174
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_175
+   Instance path: eval_top/secured_instance_175
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_176
+   Instance path: eval_top/secured_instance_176
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_177
+   Instance path: eval_top/secured_instance_177
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_178
+   Instance path: eval_top/secured_instance_178
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_179
+   Instance path: eval_top/secured_instance_179
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          3         0.0
+                                PFUREG	          3         0.0
+---------------------------------------------------
+Report for cell secured_design_180
+   Instance path: eval_top/secured_instance_180
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_181
+   Instance path: eval_top/secured_instance_181
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_182
+   Instance path: eval_top/secured_instance_182
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_183
+   Instance path: eval_top/secured_instance_183
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_184
+   Instance path: eval_top/secured_instance_184
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_185
+   Instance path: eval_top/secured_instance_185
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_186
+   Instance path: eval_top/secured_instance_186
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_187
+   Instance path: eval_top/secured_instance_187
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         0.1
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_188
+   Instance path: eval_top/secured_instance_188
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        156         1.2
+                                PFUREG	         37         0.4
+---------------------------------------------------
+Report for cell secured_design_189
+   Instance path: eval_top/secured_instance_189
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.1
+                                PFUREG	         19         0.2
+---------------------------------------------------
+Report for cell secured_design_190
+   Instance path: eval_top/secured_instance_190
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         16         0.1
+                                PFUREG	         14         0.2
+---------------------------------------------------
+Report for cell secured_design_191
+   Instance path: eval_top/secured_instance_191
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1104         8.5
+                                PFUREG	       1101        13.0
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_192	          1         5.6
+                    secured_design_208	          1         2.9
+---------------------------------------------------
+Report for cell secured_design_192
+   Instance path: eval_top/secured_instance_192
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        730         5.6
+                                PFUREG	        804         9.5
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_193	          1         1.3
+                    secured_design_194	          1         1.3
+                    secured_design_195	          1         1.3
+                    secured_design_196	          1         1.3
+                    secured_design_197	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_193
+   Instance path: eval_top/secured_instance_193
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        164         1.3
+                                PFUREG	        128         1.5
+---------------------------------------------------
+Report for cell secured_design_194
+   Instance path: eval_top/secured_instance_194
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        164         1.3
+                                PFUREG	        128         1.5
+---------------------------------------------------
+Report for cell secured_design_195
+   Instance path: eval_top/secured_instance_195
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        164         1.3
+                                PFUREG	        128         1.5
+---------------------------------------------------
+Report for cell secured_design_196
+   Instance path: eval_top/secured_instance_196
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        164         1.3
+                                PFUREG	        128         1.5
+---------------------------------------------------
+Report for cell secured_design_197
+   Instance path: eval_top/secured_instance_197
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_198	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_198
+   Instance path: eval_top/secured_instance_198
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_199	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_199
+   Instance path: eval_top/secured_instance_199
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          8        28.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_200	          1         0.0
+                    secured_design_201	          1         0.0
+                    secured_design_202	          1         0.0
+                    secured_design_203	          1         0.0
+                    secured_design_204	          1         0.0
+                    secured_design_205	          1         0.0
+                    secured_design_206	          1         0.0
+                    secured_design_207	          1         0.0
+---------------------------------------------------
+Report for cell secured_design_200
+   Instance path: eval_top/secured_instance_200
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_201
+   Instance path: eval_top/secured_instance_201
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_202
+   Instance path: eval_top/secured_instance_202
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_203
+   Instance path: eval_top/secured_instance_203
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_204
+   Instance path: eval_top/secured_instance_204
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_205
+   Instance path: eval_top/secured_instance_205
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_206
+   Instance path: eval_top/secured_instance_206
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_207
+   Instance path: eval_top/secured_instance_207
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         3.6
+---------------------------------------------------
+Report for cell secured_design_208
+   Instance path: eval_top/secured_instance_208
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        374         2.9
+                                PFUREG	        297         3.5
+---------------------------------------------------
+Report for cell secured_design_209
+   Instance path: eval_top/secured_instance_209
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1208         9.3
+                                PFUREG	       1100        13.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_210	          1         3.2
+---------------------------------------------------
+Report for cell secured_design_210
+   Instance path: eval_top/secured_instance_210
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        409         3.2
+                                PFUREG	        288         3.4
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_211	          1         3.2
+---------------------------------------------------
+Report for cell secured_design_211
+   Instance path: eval_top/secured_instance_211
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        409         3.2
+                                PFUREG	        288         3.4
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_212	          1         3.2
+---------------------------------------------------
+Report for cell secured_design_212
+   Instance path: eval_top/secured_instance_212
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        409         3.2
+                                PFUREG	        288         3.4
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_213	          1         3.2
+---------------------------------------------------
+Report for cell secured_design_213
+   Instance path: eval_top/secured_instance_213
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        409         3.2
+                                PFUREG	        288         3.4
+---------------------------------------------------
+Report for cell secured_design_214
+   Instance path: eval_top/secured_instance_214
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1356        10.5
+                                 IOBUF	         50        66.7
+                                PFUREG	        736         8.7
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_215	          1         3.1
+---------------------------------------------------
+Report for cell secured_design_215
+   Instance path: eval_top/secured_instance_215
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        407         3.1
+                                 IOBUF	         50        66.7
+                                PFUREG	         64         0.8
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_216	          1         0.5
+                    secured_design_218	          1         2.2
+                    secured_design_219	          1         0.0
+                    secured_design_220	          1         0.1
+---------------------------------------------------
+Report for cell secured_design_216
+   Instance path: eval_top/secured_instance_216
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         61         0.5
+                                PFUREG	         46         0.5
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    secured_design_217	          1         0.5
+---------------------------------------------------
+Report for cell secured_design_217
+   Instance path: eval_top/secured_instance_217
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         61         0.5
+                                PFUREG	         46         0.5
+---------------------------------------------------
+Report for cell secured_design_218
+   Instance path: eval_top/secured_instance_218
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        287         2.2
+                                 IOBUF	         40        53.3
+---------------------------------------------------
+Report for cell secured_design_219
+   Instance path: eval_top/secured_instance_219
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.0
+                                 IOBUF	          9        12.0
+                                PFUREG	          7         0.1
+---------------------------------------------------
+Report for cell secured_design_220
+   Instance path: eval_top/secured_instance_220
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         19         0.1
+                                 IOBUF	          1         1.3
+---------------------------------------------------
+Report for cell secured_design_221
+   Instance path: eval_top/secured_instance_221
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        319         2.5

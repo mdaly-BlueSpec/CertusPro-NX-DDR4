@@ -1,0 +1,204 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: S-2021.09LR
+Install: C:\lscc\radiant\3.1\synpbase
+OS: Windows 6.2
+
+Hostname: L-PF1XDREE
+
+Implementation : impl_1
+
+# Written on Mon Aug 22 08:29:36 2022
+
+##### DESIGN INFO #######################################################
+
+Top View:                "eval_top"
+Constraint File(s):      "C:\Users\dabdulra\Designs\my_designs\lpddr4_avant\cpnx_lpddr4_31\impl_1\cpnx_lpddr4_31_impl_1_cpe.ldc"
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 51 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                                                                                      Ending                                                                                        |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                                                        System                                                                                        |     5.000            |     No paths         |     No paths         |     No paths                         
+System                                                                                        lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0|hf_clk_out_o_inferred_clock     |     5.000            |     No paths         |     No paths         |     No paths                         
+System                                                                                        lpddr4_core_ipgen_clock_sync_1s_4s_0s_4|sclk_o_inferred_clock                                 |     5.000            |     No paths         |     No paths         |     No paths                         
+lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0|hf_clk_out_o_inferred_clock     System                                                                                        |     5.000            |     No paths         |     No paths         |     No paths                         
+lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0|hf_clk_out_o_inferred_clock     lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0|hf_clk_out_o_inferred_clock     |     5.000            |     No paths         |     No paths         |     No paths                         
+lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0|hf_clk_out_o_inferred_clock     lpddr4_core_ipgen_clock_sync_1s_4s_0s_4|sclk_o_inferred_clock                                 |     Diff grp         |     No paths         |     No paths         |     No paths                         
+lpddr4_core_ipgen_clock_sync_1s_4s_0s_4|sclk_o_inferred_clock                                 System                                                                                        |     5.000            |     No paths         |     No paths         |     No paths                         
+lpddr4_core_ipgen_clock_sync_1s_4s_0s_4|sclk_o_inferred_clock                                 lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0|hf_clk_out_o_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+lpddr4_core_ipgen_clock_sync_1s_4s_0s_4|sclk_o_inferred_clock                                 lpddr4_core_ipgen_clock_sync_1s_4s_0s_4|sclk_o_inferred_clock                                 |     5.000            |     No paths         |     No paths         |     No paths                         
+=======================================================================================================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:LED[0] (bidir end point)
+p:LED[0] (bidir start point)
+p:LED[1] (bidir end point)
+p:LED[1] (bidir start point)
+p:LED[2] (bidir end point)
+p:LED[2] (bidir start point)
+p:LED[3] (bidir end point)
+p:LED[3] (bidir start point)
+p:LED[4] (bidir end point)
+p:LED[4] (bidir start point)
+p:LED[5] (bidir end point)
+p:LED[5] (bidir start point)
+p:LED[6] (bidir end point)
+p:LED[6] (bidir start point)
+p:LED[7] (bidir end point)
+p:LED[7] (bidir start point)
+p:LED[8]
+p:LED[9]
+p:axi_mstr_dummy_in
+p:axi_mstr_dummy_out
+p:clk_ext
+p:cmos_xclr
+p:ddr_ca_o[0]
+p:ddr_ca_o[1]
+p:ddr_ca_o[2]
+p:ddr_ca_o[3]
+p:ddr_ca_o[4]
+p:ddr_ca_o[5]
+p:ddr_ck_o[0]
+p:ddr_cke_o[0]
+p:ddr_cs_o[0]
+p:ddr_dmi_io[0] (bidir end point)
+p:ddr_dmi_io[0] (bidir start point)
+p:ddr_dmi_io[1] (bidir end point)
+p:ddr_dmi_io[1] (bidir start point)
+p:ddr_dmi_io[2] (bidir end point)
+p:ddr_dmi_io[2] (bidir start point)
+p:ddr_dmi_io[3] (bidir end point)
+p:ddr_dmi_io[3] (bidir start point)
+p:ddr_dq_io[0] (bidir end point)
+p:ddr_dq_io[0] (bidir start point)
+p:ddr_dq_io[1] (bidir end point)
+p:ddr_dq_io[1] (bidir start point)
+p:ddr_dq_io[2] (bidir end point)
+p:ddr_dq_io[2] (bidir start point)
+p:ddr_dq_io[3] (bidir end point)
+p:ddr_dq_io[3] (bidir start point)
+p:ddr_dq_io[4] (bidir end point)
+p:ddr_dq_io[4] (bidir start point)
+p:ddr_dq_io[5] (bidir end point)
+p:ddr_dq_io[5] (bidir start point)
+p:ddr_dq_io[6] (bidir end point)
+p:ddr_dq_io[6] (bidir start point)
+p:ddr_dq_io[7] (bidir end point)
+p:ddr_dq_io[7] (bidir start point)
+p:ddr_dq_io[8] (bidir end point)
+p:ddr_dq_io[8] (bidir start point)
+p:ddr_dq_io[9] (bidir end point)
+p:ddr_dq_io[9] (bidir start point)
+p:ddr_dq_io[10] (bidir end point)
+p:ddr_dq_io[10] (bidir start point)
+p:ddr_dq_io[11] (bidir end point)
+p:ddr_dq_io[11] (bidir start point)
+p:ddr_dq_io[12] (bidir end point)
+p:ddr_dq_io[12] (bidir start point)
+p:ddr_dq_io[13] (bidir end point)
+p:ddr_dq_io[13] (bidir start point)
+p:ddr_dq_io[14] (bidir end point)
+p:ddr_dq_io[14] (bidir start point)
+p:ddr_dq_io[15] (bidir end point)
+p:ddr_dq_io[15] (bidir start point)
+p:ddr_dq_io[16] (bidir end point)
+p:ddr_dq_io[16] (bidir start point)
+p:ddr_dq_io[17] (bidir end point)
+p:ddr_dq_io[17] (bidir start point)
+p:ddr_dq_io[18] (bidir end point)
+p:ddr_dq_io[18] (bidir start point)
+p:ddr_dq_io[19] (bidir end point)
+p:ddr_dq_io[19] (bidir start point)
+p:ddr_dq_io[20] (bidir end point)
+p:ddr_dq_io[20] (bidir start point)
+p:ddr_dq_io[21] (bidir end point)
+p:ddr_dq_io[21] (bidir start point)
+p:ddr_dq_io[22] (bidir end point)
+p:ddr_dq_io[22] (bidir start point)
+p:ddr_dq_io[23] (bidir end point)
+p:ddr_dq_io[23] (bidir start point)
+p:ddr_dq_io[24] (bidir end point)
+p:ddr_dq_io[24] (bidir start point)
+p:ddr_dq_io[25] (bidir end point)
+p:ddr_dq_io[25] (bidir start point)
+p:ddr_dq_io[26] (bidir end point)
+p:ddr_dq_io[26] (bidir start point)
+p:ddr_dq_io[27] (bidir end point)
+p:ddr_dq_io[27] (bidir start point)
+p:ddr_dq_io[28] (bidir end point)
+p:ddr_dq_io[28] (bidir start point)
+p:ddr_dq_io[29] (bidir end point)
+p:ddr_dq_io[29] (bidir start point)
+p:ddr_dq_io[30] (bidir end point)
+p:ddr_dq_io[30] (bidir start point)
+p:ddr_dq_io[31] (bidir end point)
+p:ddr_dq_io[31] (bidir start point)
+p:ddr_dqs_io[0] (bidir end point)
+p:ddr_dqs_io[0] (bidir start point)
+p:ddr_dqs_io[1] (bidir end point)
+p:ddr_dqs_io[1] (bidir start point)
+p:ddr_dqs_io[2] (bidir end point)
+p:ddr_dqs_io[2] (bidir start point)
+p:ddr_dqs_io[3] (bidir end point)
+p:ddr_dqs_io[3] (bidir start point)
+p:ddr_odt_ca_o
+p:ddr_reset_n_o
+p:fs[0]
+p:fs[1]
+p:fs[2]
+p:gnd_clk
+p:in_clk1
+p:mipi_clk
+p:out_clk0
+p:rstn
+p:uart_rxd_i
+p:uart_txd_o
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

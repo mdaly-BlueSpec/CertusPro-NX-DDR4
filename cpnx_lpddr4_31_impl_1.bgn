@@ -1,0 +1,60 @@
+BITGEN: Bitstream Generator Radiant Software (64-bit) 3.1.1.232.1
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Aug 22 08:47:49 2022
+
+
+Command: bitgen -w -g REGISTER_INIT:ON -s C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/security_setting/cpnx_lpddr4_31.secproj -gui cpnx_lpddr4_31_impl_1.udb 
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                  REGISTER_INIT  |                           ON**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_I3C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|                      DONE_PORT  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|                     INITN_PORT  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|                  PROGRAMN_PORT  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|                        TRANSFR  |                             ON  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                         SERIAL  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                          112.5  |
++---------------------------------+---------------------------------+
+|                  CONFIG_IOSLEW  |                           FAST  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |             ENABLE_DONE_SYNC**  |
++---------------------------------+---------------------------------+
+|                       BOOTMODE  |                         SINGLE  |
++---------------------------------+---------------------------------+
+|         CONFIGIO_VOLTAGE_BANK0  |                            1.8  |
++---------------------------------+---------------------------------+
+|         CONFIGIO_VOLTAGE_BANK1  |                            3.3  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 3.9.
+ 
+Saving bit stream in "C:\Users\dabdulra\Designs\my_designs\lpddr4_avant\cpnx_lpddr4_31\impl_1\cpnx_lpddr4_31_impl_1.bit".
+Bitstream generation complete!

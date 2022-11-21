@@ -1,0 +1,7 @@
+-ver "C:/lscc/radiant/3.1/ip/pmi/pmi_lfcpnx.v"
+-lib pmi -vhd "C:/lscc/radiant/3.1/ip/pmi/pmi_lfcpnx.vhd"
+-sver "C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/rtl/lpddr4_core.sv"
+-sdc  "C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc"
+-path "C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core"
+-top lpddr4_core
+-a "LFCPNX"

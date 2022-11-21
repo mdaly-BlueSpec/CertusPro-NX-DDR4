@@ -1,0 +1,116 @@
+###File created by Lattice CPE. Do not modify.###
+set_hierarchy_separator /
+#create_clock -name {pll_refclk_i} -period 10 [get_pins {u_lpddr4_core/pll_refclk_i }]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+##================================== Generate Clocks ======================================##
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports in_clk1]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+##=========================================================================================##
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+#### IO_TYPE constraints                                                                 ####
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+##================================== DQS/DQ IO Type =======================================##
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_dqs_io[0]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_dqs_io[1]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_dqs_io[2]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_dqs_io[3]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[0]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[1]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[2]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[3]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[4]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[5]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[6]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[7]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[8]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[9]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[10]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[11]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[12]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[13]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[14]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[15]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[16]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[17]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[18]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[19]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[20]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[21]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[22]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[23]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[24]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[25]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[26]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[27]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[28]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[29]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[30]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[31]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+##=================================== Data Mask ===========================================##
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dmi_io[0]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dmi_io[1]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dmi_io[2]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dmi_io[3]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+##============================ Clock Address and Command ==================================##
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_ck_o[0]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_cke_o[0]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_cs_o[0]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[0]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[1]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[2]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[3]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[4]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[5]}]
+##Original File: C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/constraints/lpddr4_core.ldc

@@ -1,0 +1,65 @@
+POSTSYN: Post Synthesis Process Radiant Software (64-bit) 3.1.1.232.1
+Command Line: postsyn -a LFCPNX -p LFCPNX-100 -t LFG672 -sp 9_High-Performance_1.0V -oc Industrial -top -w -o cpnx_lpddr4_31_impl_1_syn.udb -ldc C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/impl_1/cpnx_lpddr4_31_impl_1.ldc -gui -msgset C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/promote.xml cpnx_lpddr4_31_impl_1.vm 
+   Architecture:     LFCPNX
+   Device:           LFCPNX-100
+   Package:          LFG672
+   Performance:      9_High-Performance_1.0V
+Reading input file 'cpnx_lpddr4_31_impl_1.vm' ...
+WARNING - Attribute 'sbp_module' on Module 'memc_traffic_gen_LFCPNX_30s_128s_1s_0s' cannot be supported. It will be ignored.
+WARNING - Attribute 'sbp_module' on Module 'secured_object_148' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_134' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_135' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_136' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_137' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_138' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_139' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_140' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_141' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_288' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_289' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_290' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_291' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_292' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_293' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_294' cannot be supported. It will be ignored.
+WARNING - Attribute 'NUM_STRING' on Module 'secured_object_295' cannot be supported. It will be ignored.
+Reading constraint file 'C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/impl_1/cpnx_lpddr4_31_impl_1.ldc' ...
+Merging PCS ...
+Removing unused logic ...
+INFO - Instance osc_int_inst/lscc_osc_inst/GND_cZ is optimized away.
+INFO - Instance osc_int_inst/lscc_osc_inst/u_OSC.vhiInst is optimized away.
+INFO - Signal osc_int_inst/lscc_osc_inst/u_OSC.vcc undriven or does not drive anything - clipped
+INFO - Instance osc_int_inst/VCC_cZ is optimized away.
+INFO - Instance osc_int_inst/GND_cZ is optimized away.
+INFO - Instance kitcar_inst/LED_array_i_0io[0].vhiInst is optimized away.
+INFO - Instance kitcar_inst/LED_array_i_0io[0].vloInst is optimized away.
+INFO - Signal kitcar_inst/LED_array_i_0io[0].vcc undriven or does not drive anything - clipped
+INFO - Signal kitcar_inst/LED_array_i_0io[0].gnd undriven or does not drive anything - clipped
+INFO - Instance kitcar_inst2/LED_array_i_0io[0].vhiInst is optimized away.
+INFO - Instance kitcar_inst2/LED_array_i_0io[0].vloInst is optimized away.
+INFO - Signal kitcar_inst2/LED_array_i_0io[0].vcc undriven or does not drive anything - clipped
+INFO - Signal kitcar_inst2/LED_array_i_0io[0].gnd undriven or does not drive anything - clipped
+INFO - Instance AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/u_lscc_ahbl_decoder/genblk1[0].u_lscc_ahbl_decoder_sel/genblk1[0].u_lscc_ahbl_decoder_comp/VCC_cZ is optimized away.
+INFO - Instance AHBL.u_tragen/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/u_lscc_ahbl_decoder/genblk1[0].u_lscc_ahbl_decoder_sel/genblk1[0].u_lscc_ahbl_decoder_comp/GND_cZ is optimized away.
+INFO - ... More instances are optimized away.
+INFO - Signal AHBL.u_tragen/cpu0_inst/i_cpu/N_8583 undriven or does not drive anything - clipped
+INFO - Signal AHBL.u_tragen/cpu0_inst/i_cpu/N_8584 undriven or does not drive anything - clipped
+INFO - Signal AHBL.u_tragen/gpio0_inst/lscc_gpio_inst/LxxNX.lscc_gpio_lmmi_0/genblk2[5].LxxNX.u_BB_data.vcc undriven or does not drive anything - clipped
+INFO - Signal AHBL.u_tragen/gpio0_inst/lscc_gpio_inst/LxxNX.lscc_gpio_lmmi_0/genblk2[5].LxxNX.u_BB_data.gnd undriven or does not drive anything - clipped
+INFO - Signal AHBL.u_tragen/gpio0_inst/lscc_gpio_inst/LxxNX.lscc_gpio_lmmi_0/genblk2[6].LxxNX.u_BB_data.vcc undriven or does not drive anything - clipped
+INFO - ... More signals are undriven or does not drive anything - clipped
+Starting design annotation....
+WARNING - No master clock for
+	generated clock	create_generated_clock -name {sclk_o} -source [get_pins {secured_pin_286_3_2}] -divide_by 4 [get_pins {secured_pin_286_3_0 }] .
+WARNING - No master clock for
+	generated clock	create_generated_clock -name {secured_signal_289_47} -source [get_pins {secured_pin_289_28_62}] -divide_by 1 [get_pins {secured_pin_289_28_6 }] .
+WARNING - No master clock for
+	generated clock	create_generated_clock -name {secured_signal_286_30} -source [get_pins {secured_pin_289_28_62}] -multiply_by 16 -divide_by 3 [get_pins {secured_pin_289_28_7 }] .
+WARNING - Missing master pin for instance 'u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ib3d1wzatFFA23xg.ECLKDIV_inst'.
+WARNING - Missing master pin for instance 'u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/Ip7Gy8nqwxxH0w7o4lerj6lGchC9jA99gI.PLL_inst'.
+WARNING - Missing master pin for instance 'u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/Ip7Gy8nqwxxH0w7o4lerj6lGchC9jA99gI.PLL_inst'.
+Writing output file 'cpnx_lpddr4_31_impl_1_syn.udb'.
+POSTSYN finished successfully.
+Total CPU Time: 15 secs 
+Total REAL Time: 15 secs 
+Peak Memory Usage: 315 MB

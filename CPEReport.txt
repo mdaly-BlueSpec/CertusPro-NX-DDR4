@@ -1,0 +1,114 @@
+###File created by Lattice CPE. Do not modify.###
+create_clock -name {pll_refclk_i} -period 10 [get_ports pll_refclk_i] originating in instance u_lpddr4_core was removed because it conflicts with a top-level constraint.
+##================================== Generate Clocks ======================================## originating in instance u_lpddr4_core was updated to ##================================== Generate Clocks ======================================## and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports pll_refclk_i] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports in_clk1] and kept.
+
+##=========================================================================================## originating in instance u_lpddr4_core was updated to ##=========================================================================================## and kept.
+
+#### IO_TYPE constraints                                                                 #### originating in instance u_lpddr4_core was updated to #### IO_TYPE constraints                                                                 #### and kept.
+
+##================================== DQS/DQ IO Type =======================================## originating in instance u_lpddr4_core was updated to ##================================== DQS/DQ IO Type =======================================## and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_dqs_io[0]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_dqs_io[1]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_dqs_io[2]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_dqs_io[3]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[0]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[1]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[2]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[3]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[4]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[5]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[6]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[7]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[8]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[9]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[10]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[11]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[12]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[13]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[14]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[15]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[16]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[17]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[18]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[19]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[20]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[21]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[22]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[23]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[24]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[25]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[26]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[27]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[28]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[29]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[30]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dq_io[31]}] originating in instance u_lpddr4_core was kept as is.
+
+##=================================== Data Mask ===========================================## originating in instance u_lpddr4_core was updated to ##=================================== Data Mask ===========================================## and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dmi_io[0]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dmi_io[1]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dmi_io[2]}] originating in instance u_lpddr4_core was kept as is.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_dmi_io[3]}] originating in instance u_lpddr4_core was kept as is.
+
+##============================ Clock Address and Command ==================================## originating in instance u_lpddr4_core was updated to ##============================ Clock Address and Command ==================================## and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_ck_o[0]}] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTLD_I} [get_ports {ddr_ck_o[0]}] and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_cke_o[0]}] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_cke_o[0]}] and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_cs_o[0]}] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_cs_o[0]}] and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[0]}] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[0]}] and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[1]}] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[1]}] and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[2]}] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[2]}] and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[3]}] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[3]}] and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[4]}] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[4]}] and kept.
+
+ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[5]}] originating in instance u_lpddr4_core was updated to ldc_set_port -iobuf {IO_TYPE=LVSTL_I} [get_ports {ddr_ca_o[5]}] and kept.
+

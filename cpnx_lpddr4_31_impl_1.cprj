@@ -1,0 +1,6 @@
+-ver "C:/lscc/radiant/3.1/ip/pmi/pmi_lfcpnx.v"
+-lib pmi -vhd "C:/lscc/radiant/3.1/ip/pmi/pmi_lfcpnx.vhd"
+-sver "C:/Users/dabdulra/Designs/my_designs/lpddr4_avant/cpnx_lpddr4_31/lpddr4_core/eval/eval_top.sv"
+-top eval_top
+-isTop
+-a "LFCPNX"

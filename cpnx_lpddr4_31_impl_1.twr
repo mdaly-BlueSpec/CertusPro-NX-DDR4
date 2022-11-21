@@ -1,0 +1,1586 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 3.1.1.232.1
+
+Mon Aug 22 08:46:55 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp 9_High-Performance_1.0V -hsp m -pwrprd -html -rpt cpnx_lpddr4_31_impl_1.twr cpnx_lpddr4_31_impl_1.udb -gui
+
+-------------------------------------------
+Design:          eval_top
+Family:          LFCPNX
+Device:          LFCPNX-100
+Package:         LFG672
+Performance:     9_High-Performance_1.0V
+Package Status:                     Final          Version 14
+Performance Hardware Data Status :   Final Version 3.5
+-------------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  DESIGN CHECKING
+        1.1  SDC Constraints
+        1.2  Combinational Loop
+    2  CLOCK SUMMARY
+        2.1  Clock sclk_o
+        2.2  Clock secured_signal_289_47
+        2.3  Clock secured_signal_286_30
+        2.4  Clock pll_refclk
+        2.5  Clock pclk_i
+    3  TIMING ANALYSIS SUMMARY
+        3.1  Overall (Setup and Hold)
+            3.1.1  Constraint Coverage
+            3.1.2  Timing Errors
+            3.1.3  Total Timing Score
+        3.2  Setup Summary Report
+        3.3  Hold Summary Report
+        3.4  Unconstrained Report
+            3.4.1  Unconstrained Start/End Points
+            3.4.2  Start/End Points Without Timing Constraints
+    4  DETAILED REPORT
+        4.1  Setup Detailed Report
+        4.2  Hold Detailed Report
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  DESIGN CHECKING
+==============================================
+
+1.1  SDC Constraints
+=====================
+create_generated_clock -name {secured_signal_286_30} -source [get_pins {secured_pin_0_14665_35}] -multiply_by 16 -divide_by 3 [get_pins {secured_pin_0_14665_62 }] 
+create_generated_clock -name {secured_signal_289_47} -source [get_pins {secured_pin_0_14665_35}] -divide_by 1 [get_pins {secured_pin_0_14665_61 }] 
+create_generated_clock -name {sclk_o} -source [get_pins {secured_pin_0_14606_1}] -divide_by 4 [get_pins {secured_pin_0_14606_7 }] 
+create_clock -name {pll_refclk} -period 10 [get_ports in_clk1]
+create_clock -name {pclk_i} -period 11.1111 [get_pins {osc_int_inst/lscc_osc_inst/u_OSC.OSCA_inst/HFCLKOUT }]
+set_false_path -to [get_pins AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_traffic_gen_csr/cfg_start_cdc_r0*.ff_inst/DF]
+set_false_path -to [get_pins AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_traffic_gen_csr/transaction_done_cdc_r0*.ff_inst/DF]
+set_false_path -to [get_pins AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_traffic_gen_csr/cfg_*_o*.ff_inst/DF]
+set_false_path -to [get_pins AHBL.u_tragen/ahbl_tragen_inst/lscc_ahbl_traffic_gen_inst/u_lscc_traffic_gen_csr/h2pclk*.ff_inst/DF]
+
+Operating conditions:
+--------------------
+    Temperature: 85
+
+1.2  Combinational Loop
+========================
+None
+
+==============================================
+2  CLOCK SUMMARY
+==============================================
+
+2.1 Clock "sclk_o"
+=======================
+create_generated_clock -name {sclk_o} -source [get_pins {secured_pin_0_14606_1}] -divide_by 4 [get_pins {secured_pin_0_14606_7 }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+              Clock sclk_o              |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From sclk_o                            |             Target |           7.500 ns |        133.333 MHz 
+                                        | Actual (all paths) |           7.179 ns |        139.295 MHz 
+LED_pad[8].bb_inst_IOL/SCLKOUT (MPW)    |   (50% duty cycle) |           4.000 ns |        250.000 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+              Clock sclk_o              |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From secured_signal_289_47             |                         ---- |                      No path 
+ From secured_signal_286_30             |                     1.875 ns |             slack = 4.767 ns 
+ From pll_refclk                        |                         ---- |                      No path 
+ From pclk_i                            |                     0.277 ns |            slack = -3.384 ns 
+------------------------------------------------------------------------------------------------------
+
+2.2 Clock "secured_signal_289_47"
+=======================
+create_generated_clock -name {secured_signal_289_47} -source [get_pins {secured_pin_0_14665_35}] -divide_by 1 [get_pins {secured_pin_0_14665_61 }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+      Clock secured_signal_289_47       |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From secured_signal_289_47             |             Target |          10.000 ns |        100.000 MHz 
+                                        | Actual (all paths) |               ---- |               ---- 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+      Clock secured_signal_289_47       |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From sclk_o                            |                         ---- |                      No path 
+ From secured_signal_286_30             |                         ---- |                      No path 
+ From pll_refclk                        |                         ---- |                      No path 
+ From pclk_i                            |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------
+
+2.3 Clock "secured_signal_286_30"
+=======================
+create_generated_clock -name {secured_signal_286_30} -source [get_pins {secured_pin_0_14665_35}] -multiply_by 16 -divide_by 3 [get_pins {secured_pin_0_14665_62 }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+      Clock secured_signal_286_30       |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From secured_signal_286_30             |             Target |           1.875 ns |        533.333 MHz 
+                                        | Actual (all paths) |           1.876 ns |        533.049 MHz 
+u_lpddr4_core.lscc_lpddr4_mc_inst.IFku9Cnj.Ic8mDqk3gnFx3.Ii17KHcunLBKBgh2J.DQS[1].u_DQS_BB_IOL/DQSW (MPW)                                                                
+                                        |   (50% duty cycle) |           1.876 ns |        533.049 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+      Clock secured_signal_286_30       |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From sclk_o                            |                     1.875 ns |             slack = 3.073 ns 
+ From secured_signal_289_47             |                         ---- |                      No path 
+ From pll_refclk                        |                         ---- |                      No path 
+ From pclk_i                            |                     0.069 ns |            slack = -4.696 ns 
+------------------------------------------------------------------------------------------------------
+
+2.4 Clock "pll_refclk"
+=======================
+create_clock -name {pll_refclk} -period 10 [get_ports in_clk1]
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+            Clock pll_refclk            |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From pll_refclk                        |             Target |          10.000 ns |        100.000 MHz 
+                                        | Actual (all paths) |           0.938 ns |       1066.098 MHz 
+secured_pin_0_14664_2 (MPW)             |   (50% duty cycle) |           0.938 ns |       1066.098 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+            Clock pll_refclk            |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From sclk_o                            |                         ---- |                      No path 
+ From secured_signal_289_47             |                         ---- |                      No path 
+ From secured_signal_286_30             |                         ---- |                      No path 
+ From pclk_i                            |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------
+
+2.5 Clock "pclk_i"
+=======================
+create_clock -name {pclk_i} -period 11.1111 [get_pins {osc_int_inst/lscc_osc_inst/u_OSC.OSCA_inst/HFCLKOUT }]
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+              Clock pclk_i              |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From pclk_i                            |             Target |          11.111 ns |         90.000 MHz 
+                                        | Actual (all paths) |           9.236 ns |        108.272 MHz 
+out_clk1_pad.bb_inst/B (MPW)            |   (50% duty cycle) |           5.000 ns |        200.000 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+              Clock pclk_i              |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From sclk_o                            |                     0.277 ns |            slack = -0.840 ns 
+ From secured_signal_289_47             |                         ---- |                      No path 
+ From secured_signal_286_30             |                     0.069 ns |             slack = 1.936 ns 
+ From pll_refclk                        |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------
+
+==============================================
+3  TIMING ANALYSIS SUMMARY
+==============================================
+
+3.1  Overall (Setup and Hold)
+==============================
+
+3.1.1  Constraint Coverage
+---------------------------
+Constraint Coverage: 99.4503%
+
+3.1.2  Timing Errors
+---------------------
+Timing Errors: 56 endpoints (setup), 42 endpoints (hold)
+
+3.1.3  Total Timing Score
+--------------------------
+Total Negative Slack: 94.745 ns (setup), 23.937 ns (hold)
+
+3.2  Setup Summary Report
+==========================
+
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+secured_pin_0_14606_0                    |   -4.696 ns 
+secured_pin_0_14653_13                   |   -3.384 ns 
+secured_pin_0_14649_13                   |   -3.089 ns 
+secured_pin_0_8594_14                    |   -3.006 ns 
+secured_pin_0_8593_14                    |   -3.006 ns 
+secured_pin_0_14651_13                   |   -2.827 ns 
+secured_pin_0_14647_13                   |   -2.527 ns 
+secured_pin_0_4636_9                     |   -1.683 ns 
+secured_pin_0_4634_9                     |   -1.612 ns 
+secured_pin_0_4635_9                     |   -1.608 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|          56 
+                                         |             
+-------------------------------------------------------
+
+3.3  Hold Summary Report
+=========================
+
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+secured_pin_0_8583_9                     |   -1.803 ns 
+secured_pin_0_8571_11                    |   -0.693 ns 
+secured_pin_0_4590_11                    |   -0.693 ns 
+secured_pin_0_4588_11                    |   -0.693 ns 
+secured_pin_0_4419_11                    |   -0.693 ns 
+secured_pin_0_4416_11                    |   -0.693 ns 
+secured_pin_0_4585_11                    |   -0.676 ns 
+secured_pin_0_4577_11                    |   -0.676 ns 
+secured_pin_0_4422_11                    |   -0.671 ns 
+secured_pin_0_4562_11                    |   -0.646 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |          42 
+                                         |             
+-------------------------------------------------------
+
+3.4  Unconstrained Report
+===========================
+
+3.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+-------------------------------------------------------------------
+        Listing 10 Start Points         |           Type           
+-------------------------------------------------------------------
+AHBL.u_tragen/uart0_inst/lscc_uart_inst/u_txmitt/nfifo_fsm.tx_output.ff_inst/Q                           
+                                        |          No required time
+secured_pin_0_8614_20                   |          No required time
+u_lpddr4_core.lscc_lpddr4_mc_inst.IFku9Cnj.Ic8mDqk3gnFx3.Ii17KHcunLBKBgh2J.DQS[1].u_DQS_BB_IOL/DOUT                           
+                                        |          No required time
+u_lpddr4_core.lscc_lpddr4_mc_inst.IFku9Cnj.Ic8mDqk3gnFx3.Ii17KHcunLBKBgh2J.DQS[1].u_DQS_BB_IOL/TOUT                           
+                                        |          No required time
+u_lpddr4_core.lscc_lpddr4_mc_inst.IFku9Cnj.Ic8mDqk3gnFx3.Ii17KHcunLBKBgh2J.DQS[2].u_DQS_BB_IOL/DOUT                           
+                                        |          No required time
+u_lpddr4_core.lscc_lpddr4_mc_inst.IFku9Cnj.Ic8mDqk3gnFx3.Ii17KHcunLBKBgh2J.DQS[2].u_DQS_BB_IOL/TOUT                           
+                                        |          No required time
+u_lpddr4_core.lscc_lpddr4_mc_inst.IFku9Cnj.Ic8mDqk3gnFx3.Ii17KHcunLBKBgh2J.DQS[3].u_DQS_BB_IOL/DOUT                           
+                                        |          No required time
+u_lpddr4_core.lscc_lpddr4_mc_inst.IFku9Cnj.Ic8mDqk3gnFx3.Ii17KHcunLBKBgh2J.DQS[3].u_DQS_BB_IOL/TOUT                           
+                                        |          No required time
+u_lpddr4_core.lscc_lpddr4_mc_inst.IFku9Cnj.Ic8mDqk3gnFx3.Ii17KHcunLBKBgh2J.DQS[0].u_DQS_BB_IOL/DOUT                           
+                                        |          No required time
+u_lpddr4_core.lscc_lpddr4_mc_inst.IFku9Cnj.Ic8mDqk3gnFx3.Ii17KHcunLBKBgh2J.DQS[0].u_DQS_BB_IOL/TOUT                           
+                                        |          No required time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing start po |                          
+ints                                    |                        93
+                                        |                          
+-------------------------------------------------------------------
+
+Clocked but unconstrained timing end points
+-------------------------------------------------------------------
+         Listing 10 End Points          |           Type           
+-------------------------------------------------------------------
+secured_pin_0_5531_11                   |           No arrival time
+secured_pin_0_5532_11                   |           No arrival time
+secured_pin_0_5533_11                   |           No arrival time
+secured_pin_0_5534_11                   |           No arrival time
+secured_pin_0_5535_11                   |           No arrival time
+secured_pin_0_5536_11                   |           No arrival time
+secured_pin_0_5537_11                   |           No arrival time
+secured_pin_0_5538_11                   |           No arrival time
+secured_pin_0_5539_11                   |           No arrival time
+secured_pin_0_5540_11                   |           No arrival time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                        73
+                                        |                          
+-------------------------------------------------------------------
+
+3.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 10 Start or End Points     |           Type           
+-------------------------------------------------------------------
+LED[0]                                  |                     input
+LED[3]                                  |                     input
+LED[2]                                  |                     input
+LED[1]                                  |                     input
+LED[4]                                  |                     input
+LED[7]                                  |                     input
+LED[6]                                  |                     input
+LED[5]                                  |                     input
+ddr_dq_io[16]                           |                     input
+ddr_dq_io[4]                            |                     input
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                       116
+                                        |                          
+-------------------------------------------------------------------
+
+Registers without clock definition
+Define the clock for these registers.
+--------------------------------------------------
+There is no instance satisfying reporting criteria
+
+
+==============================================
+4  DETAILED REPORT
+==============================================
+
+4.1  Setup Detailed Report
+===========================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_8605_20  (SLICE_R72C71C)
+Path End         : secured_pin_0_14606_0  (ECLKDIV_CORE_ECLKDIV_CORE_R73C74B)
+Source Clock     : pclk_i (R)
+Destination Clock: secured_signal_286_30 (R)
+Logic Level      : 1
+Delay Ratio      : 71.1% (route), 28.9% (logic)
+Clock Skew       : -3.659 ns
+Setup Constraint : 0.069 ns 
+Path Slack       : -4.696 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_8605_13->secured_pin_0_8605_20
+                                          SLICE_R72C71C   REG_DEL     0.304         2.731  97      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/rst_w ( DIVRST )
+                                                          NET DELAY   0.749         3.480  97      
+
+
+                                                                               CONSTRAINT      0.000         0.069  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.069  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.069  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.389  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.499  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.499  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.983  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.375  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.375  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w ( ECLKIN )
+                                                                               NET DELAY       0.213        -1.162  55      
+                                                                               Uncertainty     0.000        -1.162  
+                                                                               Setup time      0.054        -1.216  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                               -1.216  
+Arrival Time                                                                                                -3.479  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -4.696  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_8605_20  (SLICE_R72C71C)
+Path End         : secured_pin_0_14653_13  (DQSBUFA_CORE_DQSBUFA_CORE_R73C146)
+Source Clock     : pclk_i (R)
+Destination Clock: sclk_o (R)
+Logic Level      : 1
+Delay Ratio      : 88.4% (route), 11.6% (logic)
+Clock Skew       : -0.905 ns
+Setup Constraint : 0.277 ns 
+Path Slack       : -3.384 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_8605_13->secured_pin_0_8605_20
+                                          SLICE_R72C71C   REG_DEL     0.292         2.719  97      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/rst_w ( RST )
+                                                          NET DELAY   2.226         4.945  97      
+
+
+                                                                               CONSTRAINT      0.000         0.277  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.277  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.277  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.597  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.775  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.167  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.167  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.213        -0.954  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.390        -0.564  6289    
+kitcar_inst/sclk_o ( SCLK )                                                    NET DELAY       2.364         1.799  6289    
+                                                                               Uncertainty     0.000         1.799  
+                                                                               Setup time      0.239         1.560  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                                1.560  
+Arrival Time                                                                                                -4.944  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -3.384  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_8605_20  (SLICE_R72C71C)
+Path End         : secured_pin_0_14649_13  (DQSBUFA_CORE_DQSBUFA_CORE_R73C134)
+Source Clock     : pclk_i (R)
+Destination Clock: sclk_o (R)
+Logic Level      : 1
+Delay Ratio      : 86.9% (route), 13.1% (logic)
+Clock Skew       : -0.905 ns
+Setup Constraint : 0.277 ns 
+Path Slack       : -3.089 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_8605_13->secured_pin_0_8605_20
+                                          SLICE_R72C71C   REG_DEL     0.292         2.719  97      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/rst_w ( RST )
+                                                          NET DELAY   1.931         4.650  97      
+
+
+                                                                               CONSTRAINT      0.000         0.277  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.277  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.277  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.597  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.775  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.167  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.167  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.213        -0.954  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.390        -0.564  6289    
+kitcar_inst/sclk_o ( SCLK )                                                    NET DELAY       2.364         1.799  6289    
+                                                                               Uncertainty     0.000         1.799  
+                                                                               Setup time      0.239         1.560  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                                1.560  
+Arrival Time                                                                                                -4.649  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -3.089  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_8572_20  (SLICE_R72C57D)
+Path End         : secured_pin_0_8594_14  (SLICE_R72C89C)
+Source Clock     : pclk_i (R)
+Destination Clock: sclk_o (R)
+Logic Level      : 2
+Delay Ratio      : 72.9% (route), 27.1% (logic)
+Clock Skew       : -0.989 ns
+Setup Constraint : 0.277 ns 
+Path Slack       : -3.006 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_8572_13->secured_pin_0_8572_20
+                                          SLICE_R72C57D   REG_DEL     0.304         2.731  41      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/sync_rst_w
+                                                          NET DELAY   0.836         3.567  41      
+secured_pin_0_14154_4->secured_pin_0_14154_19
+                                          SLICE_R72C83C   CTOF_DEL    0.213         3.780  2       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/NDg7tD9dE5HBzcqDcx ( LSR )
+                                                          NET DELAY   0.555         4.335  2       
+
+
+                                                                               CONSTRAINT      0.000         0.277  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.277  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.277  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.597  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.775  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.167  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.167  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.213        -0.954  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.390        -0.564  6289    
+kitcar_inst/sclk_o ( CLK )                                                     NET DELAY       2.280         1.715  6289    
+                                                                               Uncertainty     0.000         1.715  
+                                                                               Setup time      0.387         1.328  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                                1.328  
+Arrival Time                                                                                                -4.334  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -3.006  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_8572_20  (SLICE_R72C57D)
+Path End         : secured_pin_0_8593_14  (SLICE_R72C89D)
+Source Clock     : pclk_i (R)
+Destination Clock: sclk_o (R)
+Logic Level      : 2
+Delay Ratio      : 72.9% (route), 27.1% (logic)
+Clock Skew       : -0.989 ns
+Setup Constraint : 0.277 ns 
+Path Slack       : -3.006 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_8572_13->secured_pin_0_8572_20
+                                          SLICE_R72C57D   REG_DEL     0.304         2.731  41      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/sync_rst_w
+                                                          NET DELAY   0.836         3.567  41      
+secured_pin_0_14154_4->secured_pin_0_14154_19
+                                          SLICE_R72C83C   CTOF_DEL    0.213         3.780  2       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/NDg7tD9dE5HBzcqDcx ( LSR )
+                                                          NET DELAY   0.555         4.335  2       
+
+
+                                                                               CONSTRAINT      0.000         0.277  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.277  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.277  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.597  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.775  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.167  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.167  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.213        -0.954  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.390        -0.564  6289    
+kitcar_inst/sclk_o ( CLK )                                                     NET DELAY       2.280         1.715  6289    
+                                                                               Uncertainty     0.000         1.715  
+                                                                               Setup time      0.387         1.328  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                                1.328  
+Arrival Time                                                                                                -4.334  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -3.006  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_8605_20  (SLICE_R72C71C)
+Path End         : secured_pin_0_14651_13  (DQSBUFA_CORE_DQSBUFA_CORE_R73C122)
+Source Clock     : pclk_i (R)
+Destination Clock: sclk_o (R)
+Logic Level      : 1
+Delay Ratio      : 85.1% (route), 14.9% (logic)
+Clock Skew       : -0.905 ns
+Setup Constraint : 0.277 ns 
+Path Slack       : -2.827 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_8605_13->secured_pin_0_8605_20
+                                          SLICE_R72C71C   REG_DEL     0.292         2.719  97      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/rst_w ( RST )
+                                                          NET DELAY   1.669         4.388  97      
+
+
+                                                                               CONSTRAINT      0.000         0.277  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.277  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.277  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.597  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.775  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.167  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.167  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.213        -0.954  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.390        -0.564  6289    
+kitcar_inst/sclk_o ( SCLK )                                                    NET DELAY       2.364         1.799  6289    
+                                                                               Uncertainty     0.000         1.799  
+                                                                               Setup time      0.239         1.560  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                                1.560  
+Arrival Time                                                                                                -4.387  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -2.827  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_8605_20  (SLICE_R72C71C)
+Path End         : secured_pin_0_14647_13  (DQSBUFA_CORE_DQSBUFA_CORE_R73C110)
+Source Clock     : pclk_i (R)
+Destination Clock: sclk_o (R)
+Logic Level      : 1
+Delay Ratio      : 82.4% (route), 17.6% (logic)
+Clock Skew       : -0.905 ns
+Setup Constraint : 0.277 ns 
+Path Slack       : -2.527 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_8605_13->secured_pin_0_8605_20
+                                          SLICE_R72C71C   REG_DEL     0.292         2.719  97      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/rst_w ( RST )
+                                                          NET DELAY   1.369         4.088  97      
+
+
+                                                                               CONSTRAINT      0.000         0.277  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.277  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.277  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.597  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.775  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.167  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.167  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.213        -0.954  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.390        -0.564  6289    
+kitcar_inst/sclk_o ( SCLK )                                                    NET DELAY       2.364         1.799  6289    
+                                                                               Uncertainty     0.000         1.799  
+                                                                               Setup time      0.239         1.560  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                                1.560  
+Arrival Time                                                                                                -4.087  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -2.527  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4464_20  (SLICE_R60C72B)
+Path End         : secured_pin_0_4636_9  (SLICE_R61C80B)
+Source Clock     : pclk_i (R)
+Destination Clock: sclk_o (R)
+Logic Level      : 2
+Delay Ratio      : 49.8% (route), 50.2% (logic)
+Clock Skew       : -0.989 ns
+Setup Constraint : 0.277 ns 
+Path Slack       : -1.683 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_4464_13->secured_pin_0_4464_20
+                                          SLICE_R60C72B   REG_DEL     0.304         2.731  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Nc6cm88uobLJc[41]
+                                                          NET DELAY   0.513         3.244  1       
+secured_pin_0_4636_6->secured_pin_0_4636_19
+                                          SLICE_R61C80B   CTOF_DEL    0.213         3.457  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/NcBkczsBCCLBn5d00vBkC9vjvJKhwhob5[9] ( DI0 )
+                                                          NET DELAY   0.000         3.457  1       
+
+
+                                                                               CONSTRAINT      0.000         0.277  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.277  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.277  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.597  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.775  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.167  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.167  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.213        -0.954  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.390        -0.564  6289    
+kitcar_inst/sclk_o ( CLK )                                                     NET DELAY       2.280         1.715  6289    
+                                                                               Uncertainty     0.000         1.715  
+                                                                               Setup time     -0.058         1.773  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                                1.773  
+Arrival Time                                                                                                -3.456  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -1.683  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4507_20  (SLICE_R61C74D)
+Path End         : secured_pin_0_4634_9  (SLICE_R61C77D)
+Source Clock     : pclk_i (R)
+Destination Clock: sclk_o (R)
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : -0.989 ns
+Setup Constraint : 0.277 ns 
+Path Slack       : -1.612 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_4507_13->secured_pin_0_4507_20
+                                          SLICE_R61C74D   REG_DEL     0.304         2.731  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Nc6cm88uobtx8[39]
+                                                          NET DELAY   0.442         3.173  1       
+secured_pin_0_4634_6->secured_pin_0_4634_19
+                                          SLICE_R61C77D   CTOF_DEL    0.213         3.386  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/NcBkczsBCCLBn5d00vBkC9vjvJKhwhob5[7] ( DI0 )
+                                                          NET DELAY   0.000         3.386  1       
+
+
+                                                                               CONSTRAINT      0.000         0.277  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.277  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.277  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.597  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.775  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.167  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.167  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.213        -0.954  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.390        -0.564  6289    
+kitcar_inst/sclk_o ( CLK )                                                     NET DELAY       2.280         1.715  6289    
+                                                                               Uncertainty     0.000         1.715  
+                                                                               Setup time     -0.058         1.773  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                                1.773  
+Arrival Time                                                                                                -3.385  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -1.612  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4508_20  (SLICE_R61C74C)
+Path End         : secured_pin_0_4635_9  (SLICE_R61C80C)
+Source Clock     : pclk_i (R)
+Destination Clock: sclk_o (R)
+Logic Level      : 2
+Delay Ratio      : 45.9% (route), 54.1% (logic)
+Clock Skew       : -0.989 ns
+Setup Constraint : 0.277 ns 
+Path Slack       : -1.608 ns  (Failed)
+
+Name                                      Cell/Site Name            Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2058    
+osc_int_inst/lscc_osc_inst/out_clk1_c                               NET DELAY      2.427         2.427  2058    
+
+
+
+secured_pin_0_4508_13->secured_pin_0_4508_20
+                                          SLICE_R61C74C   REG_DEL     0.304         2.731  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Nc6cm88uobtx8[40]
+                                                          NET DELAY   0.438         3.169  1       
+secured_pin_0_4635_5->secured_pin_0_4635_19
+                                          SLICE_R61C80C   CTOF_DEL    0.213         3.382  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/N1zb7ord ( DI0 )
+                                                          NET DELAY   0.000         3.382  1       
+
+
+                                                                               CONSTRAINT      0.000         0.277  1       
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.277  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.277  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.320         0.597  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.110         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.707  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.483        -1.775  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.608        -1.167  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.167  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.213        -0.954  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.390        -0.564  6289    
+kitcar_inst/sclk_o ( CLK )                                                     NET DELAY       2.280         1.715  6289    
+                                                                               Uncertainty     0.000         1.715  
+                                                                               Setup time     -0.058         1.773  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Required Time                                                                                                1.773  
+Arrival Time                                                                                                -3.381  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+Path Slack  (Failed)                                                                                        -1.608  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+4.2  Hold Detailed Report
+==========================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_14604_14  (DDRDLL_CORE_DDRDLL_CORE_R72C158)
+Path End         : secured_pin_0_8583_9  (SLICE_R72C156D)
+Source Clock     : secured_signal_286_30 (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 2
+Delay Ratio      : 32.8% (route), 67.2% (logic)
+Clock Skew       : 2.381 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -1.802 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.597        -0.689  55      
+
+
+
+secured_pin_0_14604_1->secured_pin_0_14604_14
+                                          DDRDLL_CORE_DDRDLL_CORE_R72C158  C2Q_DEL     0.349        -0.340  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/lock_w
+                                                                           NET DELAY   0.228        -0.112  1       
+secured_pin_0_8583_7->secured_pin_0_8583_19
+                                          SLICE_R72C156D                   CTOF_DEL    0.118         0.006  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/NnrEKG8qh5kG18 ( DI0 )
+                                                                           NET DELAY   0.000         0.006  1       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.117         1.808  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.808  
+Arrival Time                                                                                     0.005  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -1.802  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_8611_20  (SLICE_R72C75B)
+Path End         : secured_pin_0_8571_11  (SLICE_R72C75C)
+Source Clock     : sclk_o (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 1
+Delay Ratio      : 33.2% (route), 66.8% (logic)
+Clock Skew       : 0.858 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -0.692 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.137        -1.149  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.424        -0.725  6289    
+kitcar_inst/sclk_o                                                             NET DELAY       1.559         0.833  6289    
+
+
+
+secured_pin_0_8611_13->secured_pin_0_8611_20
+                                          SLICE_R72C75B   REG_DEL     0.177         1.011  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/Ii1d8er1rdbzK9kxt/Nc0wxdJC8yyq9JawqJ17LJc ( M0 )
+                                                          NET DELAY   0.088         1.099  1       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.100         1.791  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.791  
+Arrival Time                                                                                     1.098  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -0.692  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4550_20  (SLICE_R63C79C)
+Path End         : secured_pin_0_4590_11  (SLICE_R63C79B)
+Source Clock     : sclk_o (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 1
+Delay Ratio      : 33.2% (route), 66.8% (logic)
+Clock Skew       : 0.858 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -0.692 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.137        -1.149  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.424        -0.725  6289    
+kitcar_inst/sclk_o                                                             NET DELAY       1.559         0.833  6289    
+
+
+
+secured_pin_0_4550_13->secured_pin_0_4550_20
+                                          SLICE_R63C79C   REG_DEL     0.177         1.011  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Nzmy4lp2E1Lzq5hdy7LJc[29] ( M0 )
+                                                          NET DELAY   0.088         1.099  1       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.100         1.791  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.791  
+Arrival Time                                                                                     1.098  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -0.692  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4548_20  (SLICE_R65C80B)
+Path End         : secured_pin_0_4588_11  (SLICE_R65C80D)
+Source Clock     : sclk_o (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 1
+Delay Ratio      : 33.2% (route), 66.8% (logic)
+Clock Skew       : 0.858 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -0.692 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.137        -1.149  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.424        -0.725  6289    
+kitcar_inst/sclk_o                                                             NET DELAY       1.559         0.833  6289    
+
+
+
+secured_pin_0_4548_13->secured_pin_0_4548_20
+                                          SLICE_R65C80B   REG_DEL     0.177         1.011  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Nzmy4lp2E1Lzq5hdy7LJc[27] ( M0 )
+                                                          NET DELAY   0.088         1.099  1       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.100         1.791  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.791  
+Arrival Time                                                                                     1.098  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -0.692  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4553_20  (SLICE_R65C70D)
+Path End         : secured_pin_0_4419_11  (SLICE_R65C70B)
+Source Clock     : sclk_o (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 1
+Delay Ratio      : 33.2% (route), 66.8% (logic)
+Clock Skew       : 0.858 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -0.692 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.137        -1.149  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.424        -0.725  6289    
+kitcar_inst/sclk_o                                                             NET DELAY       1.559         0.833  6289    
+
+
+
+secured_pin_0_4553_13->secured_pin_0_4553_20
+                                          SLICE_R65C70D   REG_DEL     0.177         1.011  2       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Ne9q36fIt3lHlE6t1xcs ( M0 )
+                                                          NET DELAY   0.088         1.099  2       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.100         1.791  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.791  
+Arrival Time                                                                                     1.098  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -0.692  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4520_20  (SLICE_R66C75D)
+Path End         : secured_pin_0_4416_11  (SLICE_R66C75B)
+Source Clock     : sclk_o (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 1
+Delay Ratio      : 33.2% (route), 66.8% (logic)
+Clock Skew       : 0.858 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -0.692 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.137        -1.149  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.424        -0.725  6289    
+kitcar_inst/sclk_o                                                             NET DELAY       1.559         0.833  6289    
+
+
+
+secured_pin_0_4520_13->secured_pin_0_4520_20
+                                          SLICE_R66C75D   REG_DEL     0.177         1.011  2       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/NiFCdHn8bwJxGGjD4p1rLplpb8s ( M0 )
+                                                          NET DELAY   0.088         1.099  2       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.100         1.791  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.791  
+Arrival Time                                                                                     1.098  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -0.692  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4545_20  (SLICE_R63C80D)
+Path End         : secured_pin_0_4585_11  (SLICE_R62C80B)
+Source Clock     : sclk_o (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 1
+Delay Ratio      : 37.2% (route), 62.8% (logic)
+Clock Skew       : 0.858 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -0.675 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.137        -1.149  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.424        -0.725  6289    
+kitcar_inst/sclk_o                                                             NET DELAY       1.559         0.833  6289    
+
+
+
+secured_pin_0_4545_13->secured_pin_0_4545_20
+                                          SLICE_R63C80D   REG_DEL     0.177         1.011  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Nzmy4lp2E1Lzq5hdy7LJc[24] ( M0 )
+                                                          NET DELAY   0.105         1.116  1       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.100         1.791  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.791  
+Arrival Time                                                                                     1.115  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -0.675  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4537_20  (SLICE_R62C81B)
+Path End         : secured_pin_0_4577_11  (SLICE_R62C79D)
+Source Clock     : sclk_o (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 1
+Delay Ratio      : 37.2% (route), 62.8% (logic)
+Clock Skew       : 0.858 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -0.675 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.137        -1.149  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.424        -0.725  6289    
+kitcar_inst/sclk_o                                                             NET DELAY       1.559         0.833  6289    
+
+
+
+secured_pin_0_4537_13->secured_pin_0_4537_20
+                                          SLICE_R62C81B   REG_DEL     0.177         1.011  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Nzmy4lp2E1Lzq5hdy7LJc[16] ( M0 )
+                                                          NET DELAY   0.105         1.116  1       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.100         1.791  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.791  
+Arrival Time                                                                                     1.115  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -0.675  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4554_20  (SLICE_R67C69C)
+Path End         : secured_pin_0_4422_11  (SLICE_R67C68C)
+Source Clock     : sclk_o (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 1
+Delay Ratio      : 38.3% (route), 61.7% (logic)
+Clock Skew       : 0.858 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -0.670 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.137        -1.149  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.424        -0.725  6289    
+kitcar_inst/sclk_o                                                             NET DELAY       1.559         0.833  6289    
+
+
+
+secured_pin_0_4554_13->secured_pin_0_4554_20
+                                          SLICE_R67C69C   REG_DEL     0.177         1.011  2       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Ne9q36fIt3lHlE6t0G3c ( M0 )
+                                                          NET DELAY   0.110         1.121  2       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.100         1.791  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.791  
+Arrival Time                                                                                     1.120  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -0.670  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : secured_pin_0_4522_20  (SLICE_R62C84D)
+Path End         : secured_pin_0_4562_11  (SLICE_R62C82D)
+Source Clock     : sclk_o (R)
+Destination Clock: pclk_i (R)
+Logic Level      : 1
+Delay Ratio      : 43.3% (route), 56.7% (logic)
+Clock Skew       : 0.858 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : -0.645 ns  (Failed)
+
+Name                                      Cell/Site Name                       Delay Name     Delay   Arrival Time  Fanout  
+----------------------------------------  -----------------------------------  -------------  ------  ------------  ------  
+in_clk1                                   eval_top                             CLOCK LATENCY   0.000         0.000  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/pll_refclk_i
+                                                                               NET DELAY       0.000         0.000  1       
+secured_pin_0_14664_2->secured_pin_0_14664_3
+                                          DIFFIO18A_CORE_AB19                  PADI_DEL        0.270         0.270  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/IFku9C8m/NdGkbhbtxD
+                                                                               NET DELAY       0.057         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62
+                                          PLL_CORE_PLL_LLC                                     0.000         0.327  1       
+secured_pin_0_14665_35->secured_pin_0_14665_62 (TOTAL_ADJUSTMENTS)
+                                          PLL_CORE_PLL_LLC                                    -2.107        -1.780  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclk_w
+                                                                               NET DELAY       0.494        -1.286  1       
+secured_pin_0_14605_0->secured_pin_0_14605_2
+                                          ECLKSYNC_CORE_ECLKSYNC_CORE_R73C74B  CLK2OUT_DEL     0.000        -1.286  55      
+u_lpddr4_core/lscc_lpddr4_mc_inst/IFku9Cnj/Ic8mDqk3gnFx3/Ifd2Fz0KmLK4GEJaf2m9/eclkout_w
+                                                                               NET DELAY       0.137        -1.149  55      
+secured_pin_0_14606_1->secured_pin_0_14606_7
+                                          ECLKDIV_CORE_ECLKDIV_CORE_R73C74B    CLKDIVOUT_DEL   0.424        -0.725  6289    
+kitcar_inst/sclk_o                                                             NET DELAY       1.559         0.833  6289    
+
+
+
+secured_pin_0_4522_13->secured_pin_0_4522_20
+                                          SLICE_R62C84D   REG_DEL     0.177         1.011  1       
+u_lpddr4_core/lscc_lpddr4_mc_inst/IowAtwyt3BCi8h/Ijkkze49r3Bsy6Bufy0D28cq/ImL8Eo4fzvizsd/Nzmy4lp2E1Lzq5hdy7LJc[1] ( M0 )
+                                                          NET DELAY   0.135         1.146  1       
+
+
+                                                                    CONSTRAINT     0.000         0.000  1       
+osc_int_inst.lscc_osc_inst.u_OSC.OSCA_inst/HFCLKOUT
+                                          OSC_CORE_OSC_CORE_R1C137  CLOCK LATENCY  0.000         0.000  2059    
+osc_int_inst/lscc_osc_inst/out_clk1_c ( CLK )
+                                                                    NET DELAY      1.692         1.691  2059    
+                                                                    Uncertainty    0.000         1.691  
+                                                                    Hold time      0.100         1.791  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Required Time                                                                                   -1.791  
+Arrival Time                                                                                     1.145  
+----------------------------------------  ------------------------  -------------  -----  ------------  ------  
+Path Slack  (Failed)                                                                            -0.645  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+

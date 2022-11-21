@@ -1,0 +1,55 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: S-2021.09LR
+Install: C:\lscc\radiant\3.1\synpbase
+OS: Windows 6.2
+
+Hostname: L-PF1XDREE
+
+Implementation : impl_1
+
+# Written on Mon Aug 22 08:29:26 2022
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "C:\Users\dabdulra\Designs\my_designs\lpddr4_avant\cpnx_lpddr4_31\impl_1\cpnx_lpddr4_31_impl_1_cpe.ldc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start                                                                                         Requested     Requested     Clock        Clock                     Clock
+Level     Clock                                                                                         Frequency     Period        Type         Group                     Load 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                                                                        200.0 MHz     5.000         system       system_clkgroup           0    
+                                                                                                                                                                                
+0 -       lpddr4_core_ipgen_clock_sync_1s_4s_0s_4|sclk_o_inferred_clock                                 200.0 MHz     5.000         inferred     Inferred_clkgroup_0_2     6856 
+                                                                                                                                                                                
+0 -       lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0|hf_clk_out_o_inferred_clock     200.0 MHz     5.000         inferred     Inferred_clkgroup_0_1     2424 
+================================================================================================================================================================================
+
+
+Clock Load Summary
+******************
+
+                                                                                              Clock     Source                                                                                        Clock Pin       Non-clock Pin     Non-clock Pin
+Clock                                                                                         Load      Pin                                                                                           Seq Example     Seq Example       Comb Example 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                                                        0         -                                                                                             -               -                 -            
+                                                                                                                                                                                                                                                     
+lpddr4_core_ipgen_clock_sync_1s_4s_0s_4|sclk_o_inferred_clock                                 6856      u_lpddr4_core.lscc_lpddr4_mc_inst.u_phy.u_lp4mem.u1_clock_sync.u0_ECLKDIV.DIVOUT(ECLKDIV)     hrst_n_r0.C     -                 -            
+                                                                                                                                                                                                                                                     
+lscc_osc_DISABLED_5s_4_ENABLED_ENABLED_0s_2s_1_LIFCL_1_layer0|hf_clk_out_o_inferred_clock     2424      osc_int_inst.lscc_osc_inst.u_OSC.HFCLKOUT(OSCA)                                               prst_n_r0.C     -                 -            
+=====================================================================================================================================================================================================================================================
